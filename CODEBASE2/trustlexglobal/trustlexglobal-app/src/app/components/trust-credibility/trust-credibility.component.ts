@@ -11,7 +11,8 @@ interface Badge {
   selector: 'app-trust-credibility',
   standalone: true,
   imports: [CommonModule, ScrollAnimationDirective],
-  templateUrl: './trust-credibility.component.html'
+  templateUrl: './trust-credibility.component.html',
+  styleUrls: ['../../../styles.css'],
 })
 export class TrustCredibilityComponent {
   

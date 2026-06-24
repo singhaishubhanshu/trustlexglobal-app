@@ -1,0 +1,89 @@
+.my-block {
+  text-align: center;           /* text-center */
+  max-width: 48rem;             /* max-w-3xl = 768px */
+  margin-left: auto;            /* mx-auto = horizontal centering */
+  margin-right: auto;
+  margin-bottom: 4rem;          /* mb-16 = 64px */
+  transition: all 0.7s;         /* transition-all duration-700 */
+}
+
+/* Visible state */
+.my-block.visible {
+  opacity: 1;                   /* opacity-100 */
+  transform: translateY(0);     /* translate-y-0 */
+}
+
+/* Hidden state */
+.my-block.hidden {
+  opacity: 0;                   /* opacity-0 */
+  transform: translateY(2rem);  /* translate-y-8 = 32px */
+}
+
+h2 {
+  font-family: serif;           /* headline-serif */
+  font-size: 1.875rem;          /* text-3xl = 30px */
+  margin-bottom: 1.5rem;        /* mb-6 = 24px */
+}
+
+/* Medium breakpoint (≥768px) */
+@media (min-width: 768px) {
+  h2{
+    font-size: 2.25rem;         /* md:text-4xl = 36px */
+  }
+}
+
+/* Large breakpoint (≥1024px) */
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3rem;            /* lg:text-5xl = 48px */
+  }
+}
+
+.my-grid {
+  display: grid;                /* grid */
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+  gap: 1.5rem;                  /* gap-6 = 24px */
+}
+
+/* Medium breakpoint (≥768px) */
+@media (min-width: 768px) {
+  .my-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+  }
+}
+
+/* Large breakpoint (≥1024px) */
+@media (min-width: 1024px) {
+  .my-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg:grid-cols-3 */
+  }
+}
+
+.my-card {
+  background-color: #ffffff;    /* bg-white */
+  border-radius: 1rem;          /* rounded-2xl = 16px */
+  padding: 2rem;                /* p-8 = 32px */
+  border: 1px solid #f3f4f6;    /* border-gray-100 */
+  box-shadow: 0 4px 6px rgba(30, 58, 138, 0.3); /* shadow-navy */
+  transition: all 0.5s;         /* transition-all duration-500 */
+}
+
+/* Hover effects */
+.my-card:hover {
+  border-color: #f9e79f;        /* hover:border-gold-200 */
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2); /* hover:shadow-lg */
+}
+
+/* Visible state */
+.my-card.visible {
+  opacity: 1;                   /* opacity-100 */
+  transform: translateY(0);     /* translate-y-0 */
+}
+
+/* Hidden state */
+.my-card.hidden {
+  opacity: 0;                   /* opacity-0 */
+  transform: translateY(2rem);  /* translate-y-8 = 32px */
+}
+
+

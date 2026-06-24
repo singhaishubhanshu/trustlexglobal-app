@@ -12,7 +12,7 @@ interface Stat {
   standalone: true,
   imports: [RouterLink],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css',
+  styleUrls: ['./hero.component.css','../../../styles.css'],
 })
 export class HeroComponent {
   

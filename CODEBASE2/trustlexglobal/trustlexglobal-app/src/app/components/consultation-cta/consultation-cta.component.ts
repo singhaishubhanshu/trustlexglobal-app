@@ -7,7 +7,8 @@ import { ScrollAnimationDirective } from '../../directives/scroll-animation.dire
   selector: 'app-consultation-cta',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './consultation-cta.component.html'
+  templateUrl: './consultation-cta.component.html',
+  styleUrls: ['./consultation-cta.component.css','../../../styles.css'],
 })
 export class ConsultationCTAComponent {
   

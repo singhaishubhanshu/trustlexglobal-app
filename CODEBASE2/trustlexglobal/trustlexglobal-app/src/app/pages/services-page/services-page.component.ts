@@ -15,7 +15,8 @@ interface ServiceOverview {
   selector: 'app-services-page',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './services-page.component.html'
+  templateUrl: './services-page.component.html',
+  styleUrls: ['./services-page.component.css','../../../styles.css'],
 })
 export class ServicesPageComponent {
   // Assuming this is the data structure coming from your services file

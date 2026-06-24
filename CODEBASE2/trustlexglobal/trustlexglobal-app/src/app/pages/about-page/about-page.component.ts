@@ -10,7 +10,8 @@ import { ScrollAnimationDirective } from '../../directives/scroll-animation.dire
   selector: 'app-about-page',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './about-page.component.html'
+  templateUrl: './about-page.component.html',
+  styleUrls: ['./about-page.component.css','../../../styles.css'],
 })
 export class AboutPageComponent {
   stats = [

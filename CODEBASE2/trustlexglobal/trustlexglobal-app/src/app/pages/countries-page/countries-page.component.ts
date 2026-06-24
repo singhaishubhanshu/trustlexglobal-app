@@ -20,7 +20,8 @@ interface Jurisdiction {
   selector: 'app-countries-page',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './countries-page.component.html'
+  templateUrl: './countries-page.component.html',
+  styleUrls: ['./countries-page.component.css','../../../styles.css'],
 })
 export class CountriesPageComponent {
   

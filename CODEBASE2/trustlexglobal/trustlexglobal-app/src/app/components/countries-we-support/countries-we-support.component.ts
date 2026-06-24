@@ -14,7 +14,8 @@ interface CountrySupport {
   selector: 'app-countries-we-support',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './countries-we-support.component.html'
+  templateUrl: './countries-we-support.component.html',
+  styleUrls: ['./countries-we-support.component.css','../../../styles.css'],
 })
 export class CountriesWeSupportComponent {
   

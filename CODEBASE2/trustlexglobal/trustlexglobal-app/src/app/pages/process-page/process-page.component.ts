@@ -15,7 +15,8 @@ interface ProcessStep {
   selector: 'app-process-page',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './process-page.component.html'
+  templateUrl: './process-page.component.html',
+  styleUrls: ['./process-page.component.css','../../../styles.css'],
 })
 export class ProcessPageComponent {
   

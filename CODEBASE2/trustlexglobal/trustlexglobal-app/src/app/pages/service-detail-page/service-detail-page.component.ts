@@ -24,7 +24,8 @@ export interface ServiceDetail {
   selector: 'app-service-detail-page',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './service-detail-page.component.html'
+  templateUrl: './service-detail-page.component.html',
+  styleUrls: ['./service-detail-page.component.css','../../../styles.css'],
 })
 export class ServiceDetailPageComponent implements OnInit {
   service: ServiceDetail | undefined;

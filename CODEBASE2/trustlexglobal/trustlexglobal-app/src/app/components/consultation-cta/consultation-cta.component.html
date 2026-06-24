@@ -1,36 +1,36 @@
-<section class="section-padding bg-gradient-hero relative overflow-hidden" appScrollAnimation #ctaAnim="scrollAnim">
+<section class="section-padding bg-gradient-hero" style="position: relative; overflow: hidden;" appScrollAnimation #ctaAnim="scrollAnim">
   
-  <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px"></div>
-  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <div style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;position: absolute;top: 0; right: 0; bottom: 0; left: 0; opacity: 0.03;"></div>
+  <div style="position: absolute; top: 0; right: 0; width: 500px; height: 500px; border-radius: 50%; background-color: rgba(234, 179, 8, 0.05);filter: blur(120px);  pointer-events: none;"></div>
 
-  <div class="relative max-w-4xl mx-auto text-center">
+  <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.2); pointer-events: none;">
     
-    <div class="transition-all duration-700" [ngClass]="ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+    <div class="cta" [ngClass]="ctaAnim.isVisible ? 'visible' : ''">
       
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-400/20 mb-8">
-        <span class="w-4 h-4 text-gold-400 flex items-center justify-center">📅</span>
-        <span class="text-gold-400 text-xs tracking-wide uppercase font-medium">Complimentary Session</span>
+      <div class="my-pill">
+        <span style="width: 1rem;height: 1rem;color: #fbbf24;display: flex;align-items: center;justify-content: center;">📅</span>
+        <span style="font-size: 0.75rem;color: #fbbf24;letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;">Complimentary Session</span>
       </div>
 
-      <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-6">
+      <h2 class="my-heading">
         Ready to Build With Confidence?
       </h2>
-      <p class="font-sans text-lg md:text-xl text-charcoal-300 leading-relaxed max-w-2xl mx-auto mb-10">
+      <p class="my-paragraph">
         Book a free strategy consultation. No obligations, no pressure — just expert guidance on the best path forward for your business.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-        <a routerLink="/contact" class="btn-gold text-base gap-2 inline-flex items-center">
+      <div class="my-container">
+        <a routerLink="/contact" class="btn-gold" style="font-size: 1rem;display: inline-flex;align-items: center;gap: 0.5rem;  ">
           Book Your Free Consultation
-          <span class="ml-2">→</span>
+          <span style="margin-left: 0.5rem;">→</span>
         </a>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+      <div class="my-grid">
         @for (item of benefits; track item) {
-          <div class="flex items-center gap-2 justify-center">
-            <span class="w-4 h-4 text-gold-400 flex-shrink-0 flex items-center justify-center">✓</span>
-            <span class="text-sm text-charcoal-300">{{ item }}</span>
+          <div style="display: flex; align-items: center;justify-content: center;gap: 0.5rem;">
+            <span style="width: 1rem; height: 1rem;color: #fbbf24;flex-shrink: 0;display: flex;align-items: center; justify-content: center;">✓</span>
+            <span style="font-size: 0.875rem;color: #d1d5db;">{{ item }}</span>
           </div>
         }
       </div>

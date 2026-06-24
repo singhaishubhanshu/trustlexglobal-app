@@ -15,7 +15,8 @@ interface Testimonial {
   selector: 'app-client-success',
   standalone: true,
   imports: [CommonModule, ScrollAnimationDirective],
-  templateUrl: './client-success.component.html'
+  templateUrl: './client-success.component.html',
+  styleUrls: ['./client-success.component.css', '../../../styles.css'],
 })
 export class ClientSuccessComponent {
   

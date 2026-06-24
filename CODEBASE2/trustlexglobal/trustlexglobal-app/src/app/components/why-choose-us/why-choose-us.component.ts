@@ -12,7 +12,8 @@ interface Reason {
   selector: 'app-why-choose-us',
   standalone: true,
   imports: [CommonModule, ScrollAnimationDirective],
-  templateUrl: './why-choose-us.component.html'
+  templateUrl: './why-choose-us.component.html',
+  styleUrls: ['../../../styles.css'],
 })
 export class WhyChooseUsComponent {
   

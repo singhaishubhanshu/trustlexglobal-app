@@ -15,7 +15,8 @@ interface ServiceOverviewItem {
   selector: 'app-services-overview',
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
-  templateUrl: './services-overview.component.html'
+  templateUrl: './services-overview.component.html',
+  styleUrls: ['../../../styles.css'],
 })
 export class ServicesOverviewComponent {
   

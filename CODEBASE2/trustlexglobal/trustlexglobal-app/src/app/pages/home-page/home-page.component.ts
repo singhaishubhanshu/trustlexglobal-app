@@ -28,7 +28,8 @@ import { TrustCredibilityComponent } from '../../components/trust-credibility/tr
     FAQComponent,
     ConsultationCTAComponent
   ],
-  templateUrl: './home-page.component.html'
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css','../../../styles.css']
 })
 export class HomePageComponent {
   // No logic needed here yet, it just acts as a container
