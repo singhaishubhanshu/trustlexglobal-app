@@ -1,0 +1,71 @@
+<main>
+  <section class="bg-gradient-hero pt-32 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px"></div>
+    <div class="relative max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-3xl">
+        <div class="gold-line mb-6"></div>
+        <span class="text-gold-400 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+          Our Process
+        </span>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+          How We Deliver Results
+        </h1>
+        <p class="font-sans text-lg text-charcoal-300 leading-relaxed">
+          A transparent, structured process that eliminates ambiguity. You always know where you stand, what comes next, and who's handling it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white" appScrollAnimation #processAnim="scrollAnim">
+    <div class="max-w-5xl mx-auto space-y-12">
+      
+      @for (step of steps; track step.number; let i = $index) {
+        <div class="flex flex-col md:flex-row gap-8 transition-all duration-700"
+             [ngClass]="processAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+             [style.transition-delay]="i * 150 + 'ms'">
+             
+          <div class="flex-shrink-0">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center shadow-lg bg-gradient-to-br"
+                 [ngClass]="i < 2 ? 'from-navy-800 to-navy-600' : 'from-gold-600 to-gold-400'">
+              <span class="text-3xl">{{ step.icon }}</span>
+            </div>
+          </div>
+          
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-gold-500 font-sans font-bold text-sm">STEP {{ step.number }}</span>
+            </div>
+            <h2 class="font-serif text-2xl font-semibold text-navy-900 mb-3">{{ step.title }}</h2>
+            <p class="text-charcoal-600 text-base leading-relaxed mb-6">{{ step.description }}</p>
+            
+            <div class="grid sm:grid-cols-2 gap-3">
+              @for (d of step.details; track d) {
+                <div class="flex items-start gap-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-2 flex-shrink-0"></div>
+                  <span class="text-sm text-charcoal-600">{{ d }}</span>
+                </div>
+              }
+            </div>
+          </div>
+          
+        </div>
+      }
+
+    </div>
+  </section>
+
+  <section class="section-padding bg-gradient-hero">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">
+        Start With Step One
+      </h2>
+      <p class="font-sans text-lg text-charcoal-300 mb-8 leading-relaxed">
+        Your complimentary discovery call is the first step. No obligation, no pressure.
+      </p>
+      <a routerLink="/contact" class="btn-gold gap-2 inline-flex items-center">
+        Book Your Discovery Call <span>→</span>
+      </a>
+    </div>
+  </section>
+</main>

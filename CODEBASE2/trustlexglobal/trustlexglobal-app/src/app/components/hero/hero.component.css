@@ -1,0 +1,76 @@
+.my-element {
+  width: 1.5rem;              /* w-6 = 6 * 0.25rem */
+  height: 2.5rem;             /* h-10 = 10 * 0.25rem */
+  border-radius: 9999px;      /* rounded-full */
+  border-width: 2px;          /* border-2 */
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2); /* border-white/20 */
+  display: flex;              /* flex */
+  align-items: flex-start;    /* items-start */
+  justify-content: center;    /* justify-center */
+  padding: 0.375rem;          /* p-1.5 = 1.5 * 0.25rem */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.my-element1 {
+  position: absolute;          /* absolute */
+  bottom: 2rem;                /* bottom-8 = 8 * 0.25rem */
+  left: 50%;                   /* left-1/2 */
+  transform: translateX(-50%); /* -translate-x-1/2 */
+  animation: float 3s ease-in-out infinite; /* animate-float */
+}
+
+section {
+  position: relative;          /* relative */
+  min-height: 100vh;           /* min-h-screen */
+  display: flex;               /* flex */
+  align-items: center;         /* items-center */
+  overflow: hidden;     
+  color: #f6e05e;       /* overflow-hidden */
+}
+
+.div-element-1 {
+  position: absolute; /* absolute */
+  top: 0;             /* inset-0 = top:0, right:0, bottom:0, left:0 */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.03;      /* opacity-[0.03] */
+  background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
+  background-size: 40px 40px;
+}
+.div-element-2 {
+  position: relative;          /* relative */
+  max-width: 80rem;            /* max-w-7xl = 128 * 0.25rem */
+  margin-left: auto;           /* mx-auto */
+  margin-right: auto;
+  padding-left: 1rem;          /* px-4 */
+  padding-right: 1rem;
+  width: 100%;                 /* w-full */
+  padding-top: 8rem;           /* pt-32 = 32 * 0.25rem */
+  padding-bottom: 5rem;        /* pb-20 = 20 * 0.25rem */
+}
+
+@media (min-width: 768px) {
+  .my-element {
+    padding-left: 2rem;        /* md:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+span {
+  color: #f6e05e;          /* text-gold-400 (replace with your Tailwind gold-400 hex if customized) */
+  font-family: sans-serif; /* font-sans */
+  font-size: 0.75rem;      /* text-xs = 12px */
+  letter-spacing: 0.25em;  /* tracking-[0.25em] */
+  text-transform: uppercase; /* uppercase */
+  font-weight: 500;        /* font-medium */
+}

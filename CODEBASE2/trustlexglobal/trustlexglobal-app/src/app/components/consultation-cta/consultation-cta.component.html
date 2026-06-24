@@ -1,0 +1,40 @@
+<section class="section-padding bg-gradient-hero relative overflow-hidden" appScrollAnimation #ctaAnim="scrollAnim">
+  
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px"></div>
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="relative max-w-4xl mx-auto text-center">
+    
+    <div class="transition-all duration-700" [ngClass]="ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-400/20 mb-8">
+        <span class="w-4 h-4 text-gold-400 flex items-center justify-center">📅</span>
+        <span class="text-gold-400 text-xs tracking-wide uppercase font-medium">Complimentary Session</span>
+      </div>
+
+      <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-6">
+        Ready to Build With Confidence?
+      </h2>
+      <p class="font-sans text-lg md:text-xl text-charcoal-300 leading-relaxed max-w-2xl mx-auto mb-10">
+        Book a free strategy consultation. No obligations, no pressure — just expert guidance on the best path forward for your business.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a routerLink="/contact" class="btn-gold text-base gap-2 inline-flex items-center">
+          Book Your Free Consultation
+          <span class="ml-2">→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+        @for (item of benefits; track item) {
+          <div class="flex items-center gap-2 justify-center">
+            <span class="w-4 h-4 text-gold-400 flex-shrink-0 flex items-center justify-center">✓</span>
+            <span class="text-sm text-charcoal-300">{{ item }}</span>
+          </div>
+        }
+      </div>
+
+    </div>
+  </div>
+</section>

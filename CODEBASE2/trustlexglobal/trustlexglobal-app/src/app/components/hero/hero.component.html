@@ -1,0 +1,61 @@
+<section class="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
+  
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px"></div>
+
+  <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-navy-400/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 md:px-8 w-full pt-32 pb-20">
+    <div class="max-w-4xl">
+      
+      <div class="animate-fade-in-up flex items-center gap-2 mb-8">
+        <div class="gold-line"></div>
+        <span class="text-gold-400 font-sans text-xs tracking-[0.25em] uppercase font-medium">
+          Premium Business Services
+        </span>
+      </div>
+
+      <h1 class="animate-fade-in-up delay-100 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6">
+        Your Business, 
+        <span class="text-gradient-gold">Formed</span>
+        <br />
+        With Precision
+      </h1>
+
+      <p class="animate-fade-in-up delay-200 font-sans text-lg md:text-xl text-charcoal-300 leading-relaxed max-w-2xl mb-10">
+        Concierge-level company formation, legal drafting, and advisory services across the USA, UAE, and Singapore. We handle complexity so you can build with confidence.
+      </p>
+
+      <div class="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 mb-16">
+        <a routerLink="/contact" class="btn-gold text-base gap-2 inline-flex items-center">
+          Book Free Consultation
+          <span class="ml-2 text-lg">→</span>
+        </a>
+        <a routerLink="/services" class="inline-flex items-center justify-center px-8 py-4 text-white font-sans font-semibold text-sm tracking-wide rounded-lg border-2 border-white/20 transition-all duration-300 hover:bg-white/10 hover:border-white/40 active:scale-[0.98] gap-2">
+          Explore Services
+        </a>
+      </div>
+
+      <div class="animate-fade-in-up delay-500 flex flex-col sm:flex-row gap-8 pt-8 border-t border-white/10">
+        @for (stat of stats; track stat.label) {
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <span class="text-xl text-gold-400">{{ stat.icon }}</span>
+            </div>
+            <div>
+              <p class="font-serif text-2xl font-semibold text-white">{{ stat.value }}</p>
+              <p class="text-xs text-charcoal-400 tracking-wide uppercase">{{ stat.label }}</p>
+            </div>
+          </div>
+        }
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+    <div class="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-1.5">
+      <div class="w-1 h-2.5 bg-gold-400 rounded-full"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+<section class="section-padding bg-gradient-gold-subtle" appScrollAnimation #overviewAnim="scrollAnim">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 transition-all duration-700"
+         [ngClass]="overviewAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+      
+      <div class="gold-line-center mb-6"></div>
+      <span class="text-gold-600 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+        Our Services
+      </span>
+      <h2 class="headline-serif text-3xl md:text-4xl lg:text-5xl mb-6">
+        Comprehensive Business Solutions
+      </h2>
+      <p class="subheadline-sans">
+        From entity formation to ongoing compliance, we provide end-to-end support across the world's most strategic business jurisdictions.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      @for (service of services; track service.id; let i = $index) {
+        
+        <a [routerLink]="['/services', service.id]"
+           class="card-premium p-8 group transition-all duration-700 block"
+           [ngClass]="overviewAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+           [style.transition-delay]="i * 80 + 'ms'">
+           
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 rounded-xl bg-navy-800 flex items-center justify-center group-hover:bg-gold-500 transition-colors duration-500">
+              <span class="text-2xl text-gold-400 group-hover:text-navy-950 transition-colors duration-500">
+                {{ service.icon }}
+              </span>
+            </div>
+            <span class="text-charcoal-300 group-hover:text-gold-500 group-hover:translate-x-1 transition-all duration-300">
+              →
+            </span>
+          </div>
+          
+          <h3 class="font-serif text-xl font-semibold text-navy-900 mb-3 group-hover:text-navy-700 transition-colors">
+            {{ service.title }}
+          </h3>
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-5">
+            {{ service.description }}
+          </p>
+          
+          <div class="flex flex-wrap gap-2">
+            @for (f of service.features.slice(0, 3); track f) {
+              <span class="text-xs font-medium text-navy-700 bg-navy-50 px-3 py-1 rounded-full">
+                {{ f }}
+              </span>
+            }
+          </div>
+          
+        </a>
+      }
+      
+    </div>
+
+    <div class="text-center mt-12 transition-all duration-700 delay-700"
+         [ngClass]="overviewAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+      <a routerLink="/services" class="btn-secondary gap-2 inline-flex items-center">
+        View All Services <span class="ml-2">→</span>
+      </a>
+    </div>
+    
+  </div>
+</section>

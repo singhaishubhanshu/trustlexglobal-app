@@ -1,0 +1,174 @@
+<main>
+  <!-- Hero Section -->
+  <section class="hero-section bg-navy-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px"></div>
+    <div class="relative max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-3xl">
+        <div class="gold-line mb-6"></div>
+        <span class="text-gold-400 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+          About TRUSTLEX
+        </span>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+          Built by Founders,<br />For Founders
+        </h1>
+        <p class="font-sans text-lg text-charcoal-300 leading-relaxed">
+          We started TRUSTLEX because we experienced firsthand how frustrating it is to navigate complex business requirements without a trusted partner. We built the firm we wished existed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="section-padding bg-white" appScrollAnimation #aboutAnim="scrollAnim">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Dynamic Class Binding using the directive's isVisible property -->
+        <div class="transition-all duration-700" [ngClass]="aboutAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+          <div class="gold-line mb-6"></div>
+          <h2 class="headline-serif text-2xl md:text-3xl mb-6">Our Story</h2>
+          <div class="space-y-4 text-charcoal-600 text-base leading-relaxed">
+            <p>TRUSTLEX Global was born from a simple frustration: navigating international business formation shouldn't require a law degree, a consultant's budget, and months of trial and error.</p>
+            <p>Our founding team has built businesses across the US, UAE, and Asia. We've sat on your side of the table — dealing with confusing regulations, slow government processes, and service providers who disappeared after taking payment.</p>
+            <p>That experience shaped our approach: one dedicated advisor per client, proactive communication, and a genuine investment in your success. We don't just file paperwork — we become the partner you can call when the stakes are high and the answers aren't obvious.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 transition-all duration-700 delay-300" [ngClass]="aboutAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+          <!-- Angular @for loop -->
+          @for (stat of stats; track stat.label) {
+            <div class="bg-navy-50 rounded-2xl p-6 text-center">
+              <!-- Insert lucide-angular icon here -->
+              <span class="block w-8 h-8 text-gold-500 mx-auto mb-3">{{ stat.icon }}</span>
+              <p class="font-serif text-3xl font-semibold text-navy-900">{{ stat.value }}</p>
+              <p class="text-xs text-charcoal-500 tracking-wide uppercase mt-1">{{ stat.label }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="section-padding bg-navy-50/30" appScrollAnimation #founderAnim="scrollAnim">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 transition-all duration-700" [ngClass]="founderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+        <div class="gold-line-center mb-6"></div>
+        <span class="text-gold-600 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">Leadership</span>
+        <h2 class="headline-serif text-2xl md:text-3xl">Meet Our Founder</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-10 items-start">
+        <div class="lg:col-span-2 transition-all duration-700 delay-200" [ngClass]="founderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+          <div class="bg-white rounded-2xl p-8 shadow-navy border border-gray-100">
+            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-navy-800 to-navy-600 flex items-center justify-center mx-auto mb-6">
+              <span class="font-serif text-4xl font-bold text-gold-400">SS</span>
+            </div>
+            <div class="text-center mb-6">
+              <h3 class="font-serif text-2xl font-semibold text-navy-900 mb-1">Adv. Shubhanshu Singhai</h3>
+              <p class="text-gold-600 font-sans text-sm font-medium mb-2">Founder & Principal</p>
+              <p class="text-charcoal-500 text-xs tracking-wide">TRUSTLEX Global</p>
+            </div>
+            <a href="https://www.linkedin.com/in/sshubhanshu/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-navy-800 text-white text-sm font-medium hover:bg-navy-700 transition-colors">
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 space-y-8 transition-all duration-700 delay-300" [ngClass]="founderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+          <!-- Profile Card -->
+          <div class="bg-white rounded-2xl p-8 shadow-navy border border-gray-100">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-lg bg-gold-50 flex items-center justify-center">
+                <span class="w-5 h-5 text-gold-600">⚖️</span>
+              </div>
+              <h4 class="font-serif text-lg font-semibold text-navy-900">Professional Profile</h4>
+            </div>
+            <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+              A seasoned startup specialist and international lawyer with expertise in US corporate law, cross-border compliance, and international business formation. Adv. Shubhanshu Singhai has successfully guided numerous entrepreneurs through the complexities of establishing businesses across multiple jurisdictions.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              @for (tag of specialties; track tag) {
+                <span class="text-xs font-medium text-navy-700 bg-navy-50 px-3 py-1.5 rounded-full">{{ tag }}</span>
+              }
+            </div>
+          </div>
+
+          <!-- Experience and Education Grid -->
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl p-6 shadow-navy border border-gray-100">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-gold-50 flex items-center justify-center">
+                  <span class="w-5 h-5 text-gold-600">💼</span>
+                </div>
+                <h4 class="font-serif font-semibold text-navy-900">Experience</h4>
+              </div>
+              <ul class="space-y-3 text-sm text-charcoal-600">
+                @for (exp of experiences; track exp) {
+                  <li class="flex gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 flex-shrink-0"></div>
+                    <span>{{ exp }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-navy border border-gray-100">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-gold-50 flex items-center justify-center">
+                  <span class="w-5 h-5 text-gold-600">🎓</span>
+                </div>
+                <h4 class="font-serif font-semibold text-navy-900">Education</h4>
+              </div>
+              <ul class="space-y-3 text-sm text-charcoal-600">
+                @for (edu of educations; track edu) {
+                  <li class="flex gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 flex-shrink-0"></div>
+                    <span>{{ edu }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-navy-800 to-navy-700 rounded-2xl p-8 text-white">
+            <h4 class="font-serif text-lg font-semibold mb-3">A Message from the Founder</h4>
+            <p class="text-charcoal-300 text-sm leading-relaxed italic">
+              "I founded TRUSTLEX Global because I believe every entrepreneur deserves a trusted partner who understands the complexities of international business. Having navigated these challenges firsthand, I'm committed to ensuring our clients never face them alone. We don't just provide services — we build lasting partnerships that help founders succeed across borders."
+            </p>
+            <p class="text-gold-400 font-serif text-sm mt-4">— Adv. Shubhanshu Singhai</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="section-padding bg-navy-50/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="gold-line-center mb-6"></div>
+      <h2 class="headline-serif text-2xl md:text-3xl mb-6">Our Values</h2>
+      <div class="grid sm:grid-cols-2 gap-6 text-left mt-12">
+        @for (v of values; track v.title) {
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+            <h3 class="font-serif text-lg font-semibold text-navy-900 mb-2">{{ v.title }}</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">{{ v.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-hero">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Work With Us</h2>
+      <p class="font-sans text-lg text-charcoal-300 mb-8 leading-relaxed">
+        Ready to experience what it's like to have a business partner who actually picks up the phone?
+      </p>
+      <!-- Replaced React <Link> with Angular routerLink -->
+      <a routerLink="/contact" class="btn-gold gap-2 inline-flex items-center">
+        Book Free Consultation <span>→</span>
+      </a>
+    </div>
+  </section>
+</main>

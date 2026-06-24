@@ -1,0 +1,131 @@
+.sections {
+  padding-top: 4rem;            /* section-padding (commonly pt-16) */
+  padding-bottom: 4rem;         /* adjust as needed */
+  background-color: #ffffff;    /* bg-white */
+  transition: all 0.3s ease;    /* transition for scroll animation */
+}
+
+/* Scroll animation (fade-in-down example) */
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sections.scroll-animate {
+  animation: fade-in-down 0.5s ease-out;
+}
+
+.my-grid {
+  display: grid;                /* grid */
+  gap: 4rem;                    /* gap-16 = 64px */
+  align-items: center;          /* items-center */
+}
+
+@media (min-width: 1024px) {    /* lg breakpoint */
+  .my-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* lg:grid-cols-2 */
+  }
+}
+.my-box {
+  transition: all 0.7s;         /* transition-all duration-700 */
+}
+
+/* Visible state */
+.my-box.visible {
+  opacity: 1;                   /* opacity-100 */
+  transform: translateX(0);     /* translate-x-0 */
+}
+
+/* Hidden state */
+.my-box.hidden {
+  opacity: 0;                   /* opacity-0 */
+  transform: translateX(-2rem); /* -translate-x-8 = -32px */
+}
+
+.headline-h2 {
+  font-family: serif;           /* headline-serif */
+  font-size: 1.875rem;          /* text-3xl = 30px */
+  margin-bottom: 1.5rem;        /* mb-6 = 24px */
+}
+
+@media (min-width: 768px) {     /* md breakpoint */
+  .headline-h2 {
+    font-size: 2.25rem;         /* text-4xl = 36px */
+  }
+}
+
+@media (min-width: 1024px) {    /* lg breakpoint */
+  .headline-h2 {
+    font-size: 3rem;            /* text-5xl = 48px */
+  }
+}
+.pillers-box {
+  transition: all 0.7s;         /* transition-all duration-700 */
+  transition-delay: 0.3s;       /* delay-300 = 300ms */
+}
+
+/* space-y-6 = vertical spacing of 1.5rem (24px) between children */
+.pillers-box > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Visible state */
+.pillers-box.visible {
+  opacity: 1;                   /* opacity-100 */
+  transform: translateX(0);     /* translate-x-0 */
+}
+
+/* Hidden state */
+.pillers-box.hidden {
+  opacity: 0;                   /* opacity-0 */
+  transform: translateX(2rem);  /* translate-x-8 = 32px */
+}
+
+.pillar-item {
+  display: flex;                /* flex */
+  gap: 1.25rem;                 /* gap-5 = 20px */
+  padding: 1.5rem;              /* p-6 = 24px */
+  border-radius: 1rem;          /* rounded-2xl = 16px */
+  border: 1px solid #f3f4f6;    /* border border-gray-100 */
+  transition: all 0.5s;         /* transition-all duration-500 */
+}
+
+/* Hover effects */
+.pillar-item:hover {
+  border-color: #f9e79f;        /* hover:border-gold-200 (example hex for gold-200) */
+  box-shadow: 0 4px 6px rgba(30, 58, 138, 0.3); /* hover:shadow-navy */
+}
+
+.piller-icon {
+  font-size: 1.25rem;           /* text-xl = 20px */
+  color: #1e40af;               /* text-navy-700 */
+  transition: color 0.5s;       /* transition-colors duration-500 */
+}
+
+/* Hover effect when parent has .group */
+.group:hover .piller-icon {
+  color: #d97706;               /* text-gold-600 */
+}
+.piller-icon-container {
+  width: 3rem;                  /* w-12 = 48px */
+  height: 3rem;                 /* h-12 = 48px */
+  border-radius: 0.75rem;       /* rounded-xl = 12px */
+  background-color: #f8fafc;    /* bg-navy-50 */
+  display: flex;                /* flex */
+  align-items: center;          /* items-center */
+  justify-content: center;      /* justify-center */
+  flex-shrink: 0;               /* flex-shrink-0 */
+  transition: background-color 0.5s; /* transition-colors duration-500 */
+}
+
+/* Hover effect when parent has .group */
+.group:hover .piller-icon-container {
+  background-color: #fffbea;    /* bg-gold-50 */
+}
+

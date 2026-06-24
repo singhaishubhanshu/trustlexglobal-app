@@ -1,0 +1,96 @@
+<footer class="bg-gradient-dark text-white">
+  <div class="max-w-7xl mx-auto section-padding pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+            <span class="font-serif font-bold text-lg text-navy-950">T</span>
+          </div>
+          <div>
+            <span class="font-serif font-semibold text-lg text-white">TRUSTLEX</span>
+            <span class="block text-[10px] tracking-[0.2em] uppercase text-gold-400">Worldwide</span>
+          </div>
+        </div>
+        <p class="text-charcoal-400 text-sm leading-relaxed mb-6">
+          Premium business services for founders, entrepreneurs, and international businesses.
+          Concierge-level support across the USA, UAE, Singapore, and beyond.
+        </p>
+        <div class="space-y-3">
+          <a href="mailto:hello@trustlexglobal.com" class="flex items-center gap-2 text-sm text-charcoal-400 hover:text-gold-400 transition-colors">
+            <span class="w-4 h-4">✉</span>
+            hello&#64;trustlexglobal.com
+          </a>
+          <a href="tel:+18005551234" class="flex items-center gap-2 text-sm text-charcoal-400 hover:text-gold-400 transition-colors">
+            <span class="w-4 h-4">☏</span>
+            +1 (800) 555-1234
+          </a>
+          <div class="flex items-start gap-2 text-sm text-charcoal-400">
+            <span class="w-4 h-4 mt-0.5 flex-shrink-0">📍</span>
+            <span>New York | Dubai | Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white text-sm tracking-wide uppercase mb-6">Services</h4>
+        <ul class="space-y-3">
+          @for (s of services; track s.id) {
+            <li>
+              <a [routerLink]="['/services', s.id]" class="text-sm text-charcoal-400 hover:text-gold-400 transition-colors flex items-center gap-1 group">
+                {{ s.shortTitle }}
+                <span class="text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">↗</span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white text-sm tracking-wide uppercase mb-6">Jurisdictions</h4>
+        <ul class="space-y-3">
+          @for (c of countryLinks; track c.label) {
+            <li>
+              <a [routerLink]="[c.path]" [fragment]="c.fragment" class="text-sm text-charcoal-400 hover:text-gold-400 transition-colors flex items-center gap-1 group">
+                {{ c.label }}
+                <span class="text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">↗</span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white text-sm tracking-wide uppercase mb-6">Company</h4>
+        <ul class="space-y-3">
+          <li><a routerLink="/about" class="text-sm text-charcoal-400 hover:text-gold-400 transition-colors">About TRUSTLEX</a></li>
+          <li><a routerLink="/process" class="text-sm text-charcoal-400 hover:text-gold-400 transition-colors">Our Process</a></li>
+          <li><a routerLink="/faq" class="text-sm text-charcoal-400 hover:text-gold-400 transition-colors">FAQ</a></li>
+          <li><a routerLink="/contact" class="text-sm text-charcoal-400 hover:text-gold-400 transition-colors">Contact Us</a></li>
+        </ul>
+
+        <div class="mt-8 p-4 rounded-xl bg-navy-900/50 border border-navy-700/30">
+          <p class="text-gold-400 font-semibold text-sm mb-2">Free Strategy Session</p>
+          <p class="text-charcoal-400 text-xs leading-relaxed mb-3">
+            Book a complimentary consultation to discuss your business goals.
+          </p>
+          <a routerLink="/contact" class="inline-flex items-center gap-2 text-sm text-gold-400 font-medium hover:text-gold-300 transition-colors">
+            Book Now <span class="text-xs">↗</span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="border-t border-navy-800/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-charcoal-500">
+        &copy; {{ currentYear }} TRUSTLEX Global. All rights reserved.
+      </p>
+      <div class="flex items-center gap-6">
+        <a routerLink="/privacy" class="text-xs text-charcoal-500 hover:text-charcoal-300 transition-colors">Privacy Policy</a>
+        <a routerLink="/terms" class="text-xs text-charcoal-500 hover:text-charcoal-300 transition-colors">Terms of Service</a>
+        <a routerLink="/sitemap" class="text-xs text-charcoal-500 hover:text-charcoal-300 transition-colors">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>

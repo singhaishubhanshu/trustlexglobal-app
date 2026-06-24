@@ -1,0 +1,82 @@
+<main>
+  <section class="bg-gradient-hero pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-3xl">
+        <div class="gold-line mb-6"></div>
+        <span class="text-gold-400 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+          Our Services
+        </span>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+          Complete Business Solutions
+        </h1>
+        <p class="font-sans text-lg text-charcoal-300 leading-relaxed">
+          From company formation to compliance, legal drafting to digital infrastructure — every service your business needs, delivered with precision and personalized attention.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white" appScrollAnimation #servicesAnim="scrollAnim">
+    <div class="max-w-7xl mx-auto">
+      <div class="space-y-8">
+        
+        @for (service of services; track service.id; let i = $index) {
+          
+          <a [routerLink]="['/services', service.id]"
+             class="block bg-white rounded-2xl border border-gray-100 shadow-navy hover:shadow-lg hover:border-gold-200 transition-all duration-500 group"
+             [ngClass]="servicesAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+             [style.transition-delay]="i * 80 + 'ms'">
+             
+            <div class="flex flex-col lg:flex-row items-stretch">
+              
+              <div class="w-full lg:w-24 flex-shrink-0 bg-navy-800 rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none flex items-center justify-center p-6 group-hover:bg-gold-500 transition-colors duration-500">
+                <span class="text-3xl text-gold-400 group-hover:text-navy-950 transition-colors duration-500">
+                  {{ service.icon }}
+                </span>
+              </div>
+              
+              <div class="flex-1 p-8">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                  <h2 class="font-serif text-xl md:text-2xl font-semibold text-navy-900 group-hover:text-navy-700 transition-colors">
+                    {{ service.title }}
+                  </h2>
+                  <span class="text-charcoal-300 group-hover:text-gold-500 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 mt-1">
+                    →
+                  </span>
+                </div>
+                
+                <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+                  {{ service.description }}
+                </p>
+                
+                <div class="flex flex-wrap gap-2">
+                  @for (f of service.features; track f) {
+                    <span class="text-xs font-medium text-navy-700 bg-navy-50 px-3 py-1 rounded-full">
+                      {{ f }}
+                    </span>
+                  }
+                </div>
+              </div>
+              
+            </div>
+          </a>
+        }
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gradient-hero">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">
+        Not Sure Which Service You Need?
+      </h2>
+      <p class="font-sans text-lg text-charcoal-300 mb-8 leading-relaxed">
+        Book a free strategy consultation. We'll understand your goals and recommend the right combination of services.
+      </p>
+      <a routerLink="/contact" class="btn-gold gap-2 inline-flex items-center">
+        Book Free Consultation <span>→</span>
+      </a>
+    </div>
+  </section>
+</main>

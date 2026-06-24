@@ -1,0 +1,56 @@
+<section class="section-padding bg-white" appScrollAnimation #faqAnim="scrollAnim">
+  <div class="max-w-4xl mx-auto">
+    
+    <div class="text-center mb-16 transition-all duration-700" 
+         [ngClass]="faqAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+      <div class="gold-line-center mb-6"></div>
+      <span class="text-gold-600 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+        Questions & Answers
+      </span>
+      <h2 class="headline-serif text-3xl md:text-4xl lg:text-5xl mb-6">
+        Frequently Asked Questions
+      </h2>
+      <p class="subheadline-sans">
+        Honest answers to the questions our clients ask most. Can't find yours? Book a call — we're happy to discuss.
+      </p>
+    </div>
+
+    <div class="space-y-3">
+      
+      @for (faq of faqs; track faq.q; let i = $index) {
+        
+        <div class="border border-gray-100 rounded-xl overflow-hidden transition-all duration-500"
+             [ngClass]="[
+               openIndex === i ? 'shadow-navy border-gold-200' : 'hover:border-gray-200',
+               faqAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+             ]"
+             [style.transition-delay]="i * 50 + 'ms'">
+             
+          <button class="w-full flex items-center justify-between p-6 text-left group"
+                  (click)="toggleIndex(i)">
+            
+            <span class="font-serif font-semibold text-base pr-4 transition-colors duration-300"
+                  [ngClass]="openIndex === i ? 'text-navy-800' : 'text-navy-900 group-hover:text-navy-700'">
+              {{ faq.q }}
+            </span>
+            
+            <span class="w-5 h-5 flex-shrink-0 transition-all duration-300 text-center"
+                  [ngClass]="openIndex === i ? 'rotate-180 text-gold-500' : 'text-charcoal-400'">
+              ↓
+            </span>
+            
+          </button>
+          
+          <div class="overflow-hidden transition-all duration-500"
+               [ngClass]="openIndex === i ? 'max-h-96 pb-6' : 'max-h-0'">
+            <p class="px-6 text-charcoal-600 text-sm leading-relaxed">
+              {{ faq.a }}
+            </p>
+          </div>
+          
+        </div>
+      }
+      
+    </div>
+  </div>
+</section>

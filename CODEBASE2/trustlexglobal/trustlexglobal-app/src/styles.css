@@ -1,0 +1,242 @@
+/* Pure CSS Replacement for Tailwind 
+*/
+
+:root {
+  /* Color Palette Extracted from Gradients */
+  --color-navy-950: #050b18;
+  --color-navy-900: #0a1630;
+  --color-navy-800: #1e3670;
+  --color-navy-700: #2a4a8f;
+  --color-gold-600: #b08a28;
+  --color-gold-500: #d4a832;
+  --color-gold-400: #e9c050;
+  --color-gold-200: #fde68a;
+  --color-gray-100: #f3f4f6;
+  --color-charcoal-600: #475569;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Shadows */
+  --shadow-navy: 0 4px 20px rgba(10, 22, 48, 0.12);
+  --shadow-gold: 0 0 20px rgba(212, 168, 50, 0.15);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ==============================
+   Base Layer 
+   ============================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: rgba(212, 168, 50, 0.25);
+  color: var(--color-navy-800);
+}
+
+/* ==============================
+   Components Layer 
+   ============================== */
+
+/* Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-500) 50%, var(--color-gold-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-navy {
+  background: linear-gradient(180deg, var(--color-navy-900) 0%, var(--color-navy-800) 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-900) 30%, var(--color-navy-800) 70%, var(--color-navy-700) 100%);
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(180deg, var(--color-navy-950) 0%, var(--color-navy-900) 100%);
+}
+
+.bg-gradient-gold-subtle {
+  background: linear-gradient(135deg, #fdf9ef 0%, #faf0d5 100%);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, var(--color-gold-400), var(--color-gold-500), var(--color-gold-600)) 1;
+}
+
+/* Shadows */
+.shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+.shadow-navy {
+  box-shadow: var(--shadow-navy);
+}
+
+/* Premium Card */
+.card-premium {
+  background-color: var(--color-white);
+  border-radius: 1rem; /* rounded-2xl */
+  border: 1px solid var(--color-gray-100);
+  box-shadow: var(--shadow-navy);
+  transition: all 0.5s ease;
+}
+
+.card-premium:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold-200);
+  transform: translateY(-0.25rem); /* -translate-y-1 */
+}
+/* Hero Section Layout */
+.hero-section {
+  padding-top: 8rem; /* Equivalent to pt-32 */
+  padding-bottom: 5rem; /* Equivalent to pb-20 */
+  position: relative; /* Equivalent to relative */
+  overflow: hidden; /* Equivalent to overflow-hidden */
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 5rem 1rem; /* py-20 px-4 */
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 7rem 2rem; /* py-28 px-8 */
+  }
+}
+
+/* Typography Classes */
+.headline-serif {
+  font-family: var(--font-serif);
+  color: var(--color-navy-900);
+  letter-spacing: -0.025em; /* tracking-tight */
+  margin: 0;
+}
+
+.subheadline-sans {
+  font-family: var(--font-sans);
+  color: var(--color-charcoal-600);
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.625; /* leading-relaxed */
+}
+
+@media (min-width: 768px) {
+  .subheadline-sans {
+    font-size: 1.25rem; /* text-xl */
+  }
+}
+
+/* Buttons */
+.btn-primary, 
+.btn-secondary, 
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem; /* px-8 py-4 */
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* text-sm */
+  letter-spacing: 0.025em; /* tracking-wide */
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:active, 
+.btn-secondary:active, 
+.btn-gold:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--color-navy-800);
+  color: var(--color-white);
+  font-weight: 600; /* font-semibold */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-navy-700);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-navy-800);
+  font-weight: 600;
+  border: 2px solid var(--color-navy-800);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-navy-800);
+  color: var(--color-white);
+}
+
+.btn-gold {
+  background-color: var(--color-gold-500);
+  color: var(--color-navy-950);
+  font-weight: 700; /* font-bold */
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: var(--color-gold-400);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gold Lines */
+.gold-line {
+  width: 4rem; /* w-16 */
+  height: 0.125rem; /* h-0.5 */
+  background: linear-gradient(to right, var(--color-gold-400), var(--color-gold-600));
+}
+
+.gold-line-center {
+  width: 4rem;
+  height: 0.125rem;
+  background: linear-gradient(to right, var(--color-gold-400), var(--color-gold-600));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==============================
+   Utilities Layer (Delays) 
+   ============================== */
+/* Added transition-delay to accommodate the .animate-on-scroll logic */
+.delay-100 { animation-delay: 100ms; transition-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; transition-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; transition-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; transition-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; transition-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; transition-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; transition-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; transition-delay: 800ms; }
+
+

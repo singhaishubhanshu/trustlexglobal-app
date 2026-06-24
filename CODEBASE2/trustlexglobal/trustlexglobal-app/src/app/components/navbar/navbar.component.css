@@ -1,0 +1,401 @@
+.div-container1 {
+  max-width: 80rem;         /* max-w-7xl = 1280px */
+  margin-left: auto;        /* mx-auto centers horizontally */
+  margin-right: auto;       /* mx-auto centers horizontally */
+  padding-left: 1rem;       /* px-4 = 16px */
+  padding-right: 1rem;      /* px-4 = 16px */
+}
+
+/* Medium breakpoint (≥768px) */
+@media (min-width: 768px) {
+  .div-container1 {
+    padding-left: 2rem;     /* md:px-8 = 32px */
+    padding-right: 2rem;    /* md:px-8 = 32px */
+  }
+}
+
+nav {
+  position: fixed;            /* fixed */
+  top: 0;                     /* top-0 */
+  left: 0;                    /* left-0 */
+  right: 0;                   /* right-0 */
+  z-index: 50;                /* z-50 */
+  transition: all 0.5s;       /* transition-all duration-500 */
+}
+
+/* Scrolled state */
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* bg-white/95 */
+  backdrop-filter: blur(12px);                 /* backdrop-blur-md */
+  box-shadow: 0 4px 6px -1px rgba(30, 58, 138, 0.3),
+              0 2px 4px -1px rgba(30, 58, 138, 0.2); /* shadow-navy (example navy shadow) */
+}
+
+/* Default (not scrolled) state */
+nav.default {
+  background-color: transparent; /* bg-transparent */
+}
+
+.my-flex-group {
+  display: flex;            /* flex */
+  align-items: center;      /* items-center */
+  gap: 0.75rem;             /* gap-3 = 12px spacing between flex children */
+}
+
+/* Tailwind’s `group` utility is for nested hover states.
+   In plain CSS, replicate it with a parent hover selector: */
+.my-flex-group:hover .child {
+  /* Example: change color or style of nested elements */
+  color: #dec118;
+}
+.my-logo {
+  width: 2.5rem;                /* w-10 = 40px */
+  height: 2.5rem;               /* h-10 = 40px */
+  border-radius: 0.5rem;        /* rounded-lg = 8px */
+  background-image: linear-gradient(to bottom right, #1e3a8a, #1e40af);
+  display: flex;                /* flex */
+  align-items: center;          /* items-center */
+  justify-content: center;      /* justify-center */
+  transition: all 0.5s;         /* transition-all duration-500 */
+}
+
+/* Scrolled state */
+.my-logo.scrolled {
+  background-image: linear-gradient(to bottom right, #1e3a8a, #1e40af); /* from-navy-800 to-navy-600 */
+}
+
+/* Hover effect when grouped */
+.group:hover .my-logo.scrolled {
+  background-image: linear-gradient(to bottom right, #f59e0b, #d97706); /* from-gold-500 to-gold-600 */
+}
+
+/* Default (not scrolled) state */
+.my-logo.default {
+  background-image: linear-gradient(to bottom right, #1e3a8a, #1e40af); /* same navy gradient */
+}
+
+/* Hover effect when grouped */
+.group:hover .my-logo.default {
+  background-image: linear-gradient(to bottom right, #f59e0b, #d97706); /* gold gradient */
+}
+
+.my-logo-text {
+  font-family: serif;        /* font-serif */
+  font-weight: 700;          /* font-bold */
+  font-size: 1.125rem;       /* text-lg = 18px */
+  color: #ffffff;            /* text-white */
+  transition: color 0.5s;    /* transition-colors duration-500 */
+}
+
+/* Group hover effect */
+.group:hover .my-logo-text {
+  color: #0a0a2a;            /* text-navy-950 (deep navy shade) */
+}
+
+.trustlex-text {
+  font-family: serif;        /* font-serif */
+  font-weight: 600;          /* font-semibold */
+  font-size: 1.125rem;       /* text-lg = 18px */
+  letter-spacing: -0.015em;  /* tracking-tight */
+  transition: color 0.5s;    /* transition-colors duration-500 */
+}
+
+/* Scrolled state */
+.trustlex-text.scrolled {
+  color: #1e3a8a;            /* text-navy-900 */
+}
+
+/* Default (not scrolled) state */
+.trustlex-text.default {
+  color: #ffffff;            /* text-white */
+}
+
+.global-text {
+  display: block;             /* block */
+  font-size: 10px;            /* text-[10px] */
+  letter-spacing: 0.2em;      /* tracking-[0.2em] */
+  text-transform: uppercase;  /* uppercase */
+  font-family: sans-serif;    /* font-sans */
+  transition: color 0.5s;     /* transition-colors duration-500 */
+}
+
+/* Scrolled state */
+.global-text.scrolled {
+  color: #d97706;             /* text-gold-600 (deep gold shade) */
+}
+
+/* Default (not scrolled) state */
+.global-text.default {
+  color: #f59e0b;             /* text-gold-400 (lighter gold shade) */
+}
+
+.my-flex {
+  display: none;             /* hidden */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .my-flex {
+    display: flex;           /* lg:flex */
+    align-items: center;     /* items-center */
+    gap: 0.25rem;            /* gap-1 = 4px spacing between children */
+  }
+}
+
+/* Tailwind’s `group` utility is for nested hover states.
+   In plain CSS, replicate it with a parent hover selector: */
+.my-flex:hover .child {
+  /* Example: style changes for nested elements */
+  color: #1e40af;
+}
+
+.service-button {
+  display: flex;                /* flex */
+  align-items: center;          /* items-center */
+  gap: 0.25rem;                 /* gap-1 = 4px */
+  padding: 0.5rem 1rem;         /* px-4 = 16px, py-2 = 8px */
+  font-size: 0.875rem;          /* text-sm = 14px */
+  font-weight: 500;             /* font-medium */
+  border-radius: 0.5rem;        /* rounded-lg = 8px */
+  transition: color 0.3s, background-color 0.3s; /* transition-colors duration-300 */
+}
+
+/* Scrolled state */
+.service-button.scrolled {
+  color: #374151;               /* text-charcoal-700 */
+}
+
+.service-button.scrolled:hover {
+  color: #1e40af;               /* hover:text-navy-800 */
+  background-color: #f0f4ff;    /* hover:bg-navy-50 */
+}
+
+/* Default (not scrolled) state */
+.service-button.default {
+  color: rgba(41, 32, 109, 0.8); /* text-white/80 */
+}
+
+.service-button.default:hover {
+  color: #ffffff;               /* hover:text-white */
+  background-color: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
+}
+
+.service-icon {
+  font-size: 0.75rem;          /* text-xs = 12px */
+  margin-left: 0.25rem;        /* ml-1 = 4px */
+  transition: transform 0.3s;  /* transition-transform duration-300 */
+}
+
+/* Rotated state */
+.service-icon.rotated {
+  transform: rotate(180deg);   /* rotate-180 */
+}
+
+.my-dropdown {
+  position: absolute;             /* absolute */
+  top: 100%;                      /* top-full = directly below parent */
+  left: 0;                        /* left-0 */
+  width: 20rem;                   /* w-80 = 320px */
+  background-color: #ffffff;      /* bg-white */
+  border-radius: 0.75rem;         /* rounded-xl = 12px */
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),
+              0 10px 10px -5px rgba(0,0,0,0.04); /* shadow-xl */
+  border: 1px solid #f3f4f6;      /* border border-gray-100 */
+  padding: 0.75rem;               /* p-3 = 12px */
+  animation: fade-in-down 0.3s ease-out; /* animate-fade-in-down */
+}
+
+/* Keyframes for fade-in-down */
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.a-dropdown {
+  display: flex;                /* flex */
+  align-items: center;          /* items-center */
+  justify-content: space-between; /* justify-between */
+  padding: 0.75rem 1rem;        /* px-4 = 16px, py-3 = 12px */
+  border-radius: 0.5rem;        /* rounded-lg = 8px */
+  transition: color 0.3s, background-color 0.3s; /* transition-colors duration-300 */
+}
+
+/* Hover effect */
+.a-dropdown:hover {
+  background-color: #f0f4ff;    /* hover:bg-navy-50 (light navy tint) */
+}
+
+/* Group hover effect for children */
+.group:hover .child {
+  /* Example: nested hover styling */
+  color: #1e40af;
+}
+
+.service-span {
+  font-size: 0.75rem;          /* text-xs = 12px */
+  color: #f59e0b;              /* text-gold-500 */
+  opacity: 0;                  /* opacity-0 */
+  transition: opacity 0.3s;    /* transition-opacity (default duration 300ms) */
+}
+
+/* Group hover effect */
+.group:hover .service-span {
+  opacity: 1;                  /* group-hover:opacity-100 */
+}
+
+.service-flexbox {
+  display: flex;                /* flex */
+  align-items: center;          /* items-center */
+  gap: 0.75rem;                 /* gap-3 = 12px */
+  padding: 0.625rem 1rem;       /* px-4 = 16px, py-2.5 = 10px */
+  border-radius: 0.5rem;        /* rounded-lg = 8px */
+  transition: color 0.3s, background-color 0.3s; /* transition-colors duration-300 */
+}
+
+/* Hover effect */
+.service-flexbox:hover {
+  background-color: #f0f4ff;    /* hover:bg-navy-50 (light navy tint) */
+}
+
+.service-else {
+  padding: 0.5rem 1rem;         /* px-4 = 16px, py-2 = 8px */
+  font-size: 0.875rem;          /* text-sm = 14px */
+  font-weight: 500;             /* font-medium */
+  border-radius: 0.5rem;        /* rounded-lg = 8px */
+  transition: color 0.3s, background-color 0.3s; /* transition-colors duration-300 */
+}
+
+/* Scrolled state */
+.service-else.scrolled {
+  color: #374151;               /* text-charcoal-700 */
+}
+
+.service-else.scrolled:hover {
+  color: #1e40af;               /* hover:text-navy-800 */
+  background-color: #f0f4ff;    /* hover:bg-navy-50 */
+}
+
+/* Default (not scrolled) state */
+.service-else.default {
+  color: rgba(255, 255, 255, 0.8); /* text-white/80 */
+}
+
+.service-else.default:hover {
+  color: #ffffff;               /* hover:text-white */
+  background-color: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
+}
+a {
+  text-decoration: none;
+}
+
+.book-consultation-flex {
+  display: none;               /* hidden */
+}
+
+@media (min-width: 1024px) {   /* lg breakpoint */
+  .book-consultation-flex {
+    display: flex;             /* lg:flex */
+    align-items: center;       /* items-center */
+    gap: 1rem;                 /* gap-4 = 16px */
+  }
+}
+
+.book-consultation-button {
+  padding: 0.625rem 1.5rem;     /* px-6 = 24px, py-2.5 = 10px */
+  border-radius: 0.5rem;        /* rounded-lg = 8px */
+  font-size: 0.875rem;          /* text-sm = 14px */
+  font-weight: 600;             /* font-semibold */
+  transition: all 0.3s;         /* transition-all duration-300 */
+}
+
+/* Scrolled state */
+.book-consultation-button.scrolled {
+  background-color: #1e3a8a;    /* bg-navy-800 */
+  color: #ffffff;               /* text-white */
+}
+
+.book-consultation-button.scrolled:hover {
+  background-color: #1e40af;    /* hover:bg-navy-700 */
+}
+
+/* Default (not scrolled) state */
+.book-consultation-button.default {
+  background-color: #f59e0b;    /* bg-gold-500 */
+  color: #0f172a;               /* text-navy-950 */
+}
+
+.book-consultation-button.default:hover {
+  background-color: #fbbf24;    /* hover:bg-gold-400 */
+}
+
+.services-left-icon {
+  font-size: 1.5rem;            /* text-2xl = 24px */
+  transition: color 0.3s;       /* transition-colors duration-300 */
+}
+
+/* Scrolled state */
+.services-left-icon.scrolled {
+  color: #1e3a8a;               /* text-navy-900 */
+}
+
+/* Default (not scrolled) state */
+.services-left-icon.default {
+  color: #ffffff;               /* text-white */
+}
+
+.my-panel {
+  background-color: #ffffff;    /* bg-white */
+  border-top: 1px solid #f3f4f6; /* border-t border-gray-100 */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+              0 4px 6px -2px rgba(0,0,0,0.05); /* shadow-lg */
+  animation: fade-in-down 0.3s ease-out; /* animate-fade-in-down */
+}
+
+@media (min-width: 1024px) {    /* lg breakpoint */
+  .my-panel {
+    display: none;              /* lg:hidden */
+  }
+}
+
+/* Keyframes for fade-in-down */
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.my-panel-inner {
+  max-width: 80rem;             /* max-w-7xl = 1280px */
+  margin-left: auto;            /* mx-auto = center horizontally */
+  margin-right: auto;
+  padding-left: 1rem;           /* px-4 = 16px */
+  padding-right: 1rem;
+  padding-top: 1.5rem;          /* py-6 = 24px */
+  padding-bottom: 1.5rem;
+}
+
+/* space-y-1 = vertical spacing of 0.25rem (4px) between children */
+.my-panel-inner > * + * {
+  margin-top: 0.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+

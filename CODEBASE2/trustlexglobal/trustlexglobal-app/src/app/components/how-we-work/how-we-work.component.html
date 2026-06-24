@@ -1,0 +1,56 @@
+<section class="section-padding bg-white" appScrollAnimation #workAnim="scrollAnim">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 transition-all duration-700"
+         [ngClass]="workAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+      
+      <div class="gold-line-center mb-6"></div>
+      <span class="text-gold-600 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+        Our Process
+      </span>
+      <h2 class="headline-serif text-3xl md:text-4xl lg:text-5xl mb-6">
+        How We Work With You
+      </h2>
+      <p class="subheadline-sans">
+        A structured, transparent process that eliminates ambiguity and delivers results. You always know where you stand and what comes next.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+      <div class="hidden lg:block absolute top-24 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-navy-200 via-gold-300 to-gold-400"></div>
+      
+      @for (step of steps; track step.number; let i = $index) {
+        <div class="relative transition-all duration-700"
+             [ngClass]="workAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+             [style.transition-delay]="i * 150 + 'ms'">
+             
+          <div class="text-center">
+            
+            <div class="relative inline-flex w-20 h-20 rounded-2xl bg-gradient-to-br items-center justify-center mb-6 shadow-lg {{ step.accent }}">
+              <span class="text-3xl text-white">{{ step.icon }}</span>
+              <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center text-xs font-bold text-navy-800">
+                {{ step.number }}
+              </span>
+            </div>
+            
+            <h3 class="font-serif text-xl font-semibold text-navy-900 mb-3">
+              {{ step.title }}
+            </h3>
+            <p class="text-charcoal-600 text-sm leading-relaxed">
+              {{ step.description }}
+            </p>
+            
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="text-center mt-16 transition-all duration-700 delay-700"
+         [ngClass]="workAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+      <a routerLink="/contact" class="btn-gold gap-2 inline-flex items-center">
+        Start Your Journey <span class="ml-2">→</span>
+      </a>
+    </div>
+    
+  </div>
+</section>

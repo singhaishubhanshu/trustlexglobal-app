@@ -1,0 +1,76 @@
+<main>
+  <section class="bg-gradient-hero" style="padding-top: 8rem; padding-bottom: 5rem; position: relative; overflow: hidden;">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px"></div>
+    <div class="div-container">
+      <div style="position: relative; z-index: 1; max-width: 48rem;">
+        <div class="gold-line" style="margin-bottom: 1.5rem;"></div>
+        <span class="faq-span">
+          FAQ
+        </span>
+        <h1>
+          Frequently Asked Questions
+        </h1>
+        <p style="font-family: sans-serif; font-size: 1.125rem; color: #d1d5db; line-height: 1.625;">
+          Honest answers to the questions our clients ask most. Can't find yours? We're happy to discuss in a free consultation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white" appScrollAnimation #faqAnim="scrollAnim">
+    <div class="my-element1">
+      
+      @for (category of faqs; track category.category; let ci = $index) {
+        <div class="faq-item"
+            [ngClass]="faqAnim.isVisible ? 'visible' : 'hidden'"
+                [style.transition-delay]="ci * 100 + 'ms'">
+             
+          <h2 class="category-heading">
+            {{ category.category }}
+          </h2>
+          
+          <div class="space">
+            @for (item of category.items; track item.q; let qi = $index) {
+              
+              <div class="my-card"
+     [ngClass]="openItems[category.category + '-' + qi] ? 'expanded' : 'collapsed'">
+                
+                <button class="my-toggle"
+                        (click)="toggleItem(category.category + '-' + qi)">
+                  <div class="group">
+                  <span class="my-link"
+                        [ngClass]="openItems[category.category + '-' + qi] ? 'expanded' : 'collapsed'">
+                    {{ item.q }}
+                  </span></div>
+                  <span class="my-icon"
+                        [ngClass]="openItems[category.category + '-' + qi] ? 'expanded' : 'collapsed'">
+                    ↓
+                  </span>
+                </button>
+                
+                <div class="items-heading"
+                     [ngClass]="openItems[category.category + '-' + qi] ? 'expanded' : 'collapsed'">
+                  <p class="items">{{ item.a }}</p>
+                </div>
+                
+              </div>
+            }
+          </div>
+        </div>
+      }
+      
+    </div>
+
+    <div style="max-width: 56rem;margin-left: auto; margin-right: auto;margin-top: 4rem;text-align: center;">
+      <div style="background-color: #f8fafc;border-radius: 1rem;padding: 2.5rem;">
+        <h2 class="question">Still Have Questions?</h2>
+        <p class="booking">
+          Book a free consultation and speak directly with a senior advisor.
+        </p>
+        <a routerLink="/contact" class="btn-gold">
+          Book Free Consultation <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

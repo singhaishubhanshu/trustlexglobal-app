@@ -1,0 +1,73 @@
+<nav [ngClass]="scrolled ? 'scrolled' : 'default'">
+  
+  <div class="div-container1">
+    <div style="display: flex;align-items: center;justify-content: space-between;height: 5rem;">
+      
+      <a routerLink="/" class="my-flex-group">
+        <div class="my-logo"
+             [ngClass]="scrolled ? 'scrolled' : 'default'">
+          <span class="my-logo-text">T</span>
+        </div>
+        <div>
+          <span class="trustlex-text"
+                [ngClass]="scrolled ? 'scrolled' : 'default'">
+            TRUSTLEX
+          </span>
+          <span class="global-text"
+                [ngClass]="scrolled ? 'scrolled' : 'default'">
+            Global
+          </span>
+        </div>
+      </a>
+
+      <div class="my-flex">
+        @for (link of navLinks; track link.label) {
+          
+          @if (link.hasDropdown) {
+            <div (mouseenter)="servicesOpen = true" (mouseleave)="servicesOpen = false" style="position: relative;">
+              <button class="service-button"
+                      [ngClass]="scrolled ? 'scrolled' : 'default'">
+                {{ link.label }}
+                <span class="service-icon" [ngClass]="servicesOpen ? 'rotated' : ''">▼</span>
+              </button>
+              
+              @if (servicesOpen) {
+                <div class="my-dropdown">
+                  <a routerLink="/services" class="a-dropdown">
+                    <div>
+                      <p style="font-family: serif;font-weight: 600;font-size: 0.875rem;color: #1e3a8a;">All Services</p>
+                      <p style="font-size: 0.75rem;color: #6b7280;">View our complete service portfolio</p>
+                    </div>
+                    <span class="service-span">→</span>
+                  </a>
+                  <div style="height: 1px;background-color: #f3f4f6;margin-top: 0.5rem; margin-bottom: 0.5rem;"></div>
+                  
+                  @for (s of services; track s.id) {
+                    <a [routerLink]="['/services', s.id]" class="service-flexbox">
+                      <span style="font-size: 1.125rem;flex-shrink: 0;">{{ s.icon }}</span>
+                      <span style="font-size: 0.875rem;color: #374151;">{{ s.shortTitle }}</span>
+                    </a>
+                  }
+                </div>
+              }
+            </div>
+          } @else {
+            <a [routerLink]="link.href" 
+               class="service-else"
+               [ngClass]="scrolled ? 'scrolled' : 'default'">
+              {{ link.label }}
+            </a>
+          }
+        }
+      </div>
+
+      <div class="book-consultation-flex">
+        <a routerLink="/contact" class="book-consultation-button"
+           [ngClass]="scrolled ? 'scrolled' : 'default'">
+          Book Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+
+</nav>
