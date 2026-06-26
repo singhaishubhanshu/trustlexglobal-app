@@ -16,7 +16,7 @@ interface Step {
   standalone: true,
   imports: [CommonModule, RouterLink, ScrollAnimationDirective],
   templateUrl: './how-we-work.component.html',
-  styleUrls: ['../../../styles.css'],
+  styleUrls: ['../../../styles.css', './how-we-work.component.css'],
 })
 export class HowWeWorkComponent {
   

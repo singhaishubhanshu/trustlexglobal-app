@@ -13,7 +13,7 @@ interface Reason {
   standalone: true,
   imports: [CommonModule, ScrollAnimationDirective],
   templateUrl: './why-choose-us.component.html',
-  styleUrls: ['../../../styles.css'],
+  styleUrls: ['../../../styles.css', './why-choose-us.component.css'],
 })
 export class WhyChooseUsComponent {
   

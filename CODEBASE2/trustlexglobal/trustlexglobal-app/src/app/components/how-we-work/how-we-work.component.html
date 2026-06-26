@@ -5,7 +5,7 @@
          [ngClass]="workAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
       
       <div class="gold-line-center mb-6"></div>
-      <span class="text-gold-600 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+      <span class="text-gold-600 font-sans text-xs tracking-custom uppercase font-medium block mb-4">
         Our Process
       </span>
       <h2 class="headline-serif text-3xl md:text-4xl lg:text-5xl mb-6">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-      <div class="hidden lg:block absolute top-24 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-navy-200 via-gold-300 to-gold-400"></div>
+      <div class="hidden lg:block absolute top-24 box box2 h-0.5 bg-gradient-to-r from-navy-200 via-gold-300 to-gold-400"></div>
       
       @for (step of steps; track step.number; let i = $index) {
         <div class="relative transition-all duration-700"

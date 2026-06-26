@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.box {
+  position: absolute;
+  left: 12%;
+  top: 50px;
+  width: 200px;
+  height: 100px;
+  background: #1e40af; /* navy-800 */
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+}
+
+.box2 {
+  position: absolute;
+  right: 12%;
+  top: 50px;
+  width: 200px;
+  height: 100px;
+  background: #1e40af; /* navy-800 */
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+
+
+
+
