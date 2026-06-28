@@ -49,6 +49,24 @@
   }
 }
 
+@media (min-width: 640px) { /* lg breakpoint */
+  .sm:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Tailwind lg:grid-cols-3 */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .lg:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Tailwind lg:grid-cols-3 */
+  }
+}
+
+@media (min-width: 1280px) { /* lg breakpoint */
+  .xl:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Tailwind lg:grid-cols-4 */
+  }
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -258,3 +276,12 @@
 .duration-700 {
   transition-duration: 0.7s; /* 700ms */
 }
+
+.border-gold-400\/30:hover{
+  border-color: rgba(255 215 0 / 0.3); /* 30% opacity gold */
+}
+
+.bg-navy-900\/60:hover {
+  background-color: rgba(15, 23, 42, 0.6); /* 60% opacity navy-900 */
+}
+

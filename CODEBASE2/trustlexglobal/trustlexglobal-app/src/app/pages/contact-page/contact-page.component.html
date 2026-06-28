@@ -41,28 +41,28 @@
               <div class="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">First Name</label>
-                  <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your first name">
+                  <input type="text" required name="firstName" [(ngModel)]="formData.firstName" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your first name">
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">Last Name</label>
-                  <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your last name">
+                  <input type="text" required name="lastName" [(ngModel)]="formData.lastName" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your last name">
                 </div>
               </div>
               
               <div class="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">Email</label>
-                  <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="you@company.com">
+                  <input type="email" required name="email" [(ngModel)]="formData.email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="you@company.com">
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">Phone</label>
-                  <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="+1 (555) 000-0000">
+                  <input type="tel" name="phone" [(ngModel)]="formData.phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="+1 (555) 000-0000">
                 </div>
               </div>
 
               <div>
                 <label class="block text-sm font-medium text-navy-900 mb-2">Which service interests you?</label>
-                <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none bg-white" required>
+                <select name="service" [(ngModel)]="formData.service"  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none bg-white" required>
                   <option value="">Select a service</option>
                   @for (service of services; track service) {
                     <option>{{ service }}</option>
@@ -72,7 +72,7 @@
 
               <div>
                 <label class="block text-sm font-medium text-navy-900 mb-2">Tell us about your business goals</label>
-                <textarea rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none resize-none" placeholder="Describe your business, your goals, and what you're looking to achieve..."></textarea>
+                <textarea rows="5" name="goals" [(ngModel)]="formData.goals" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none resize-none" placeholder="Describe your business, your goals, and what you're looking to achieve..."></textarea>
               </div>
 
               <div>
@@ -80,7 +80,7 @@
                 <div class="grid grid-cols-3 gap-3">
                   @for (time of timeSlots; track time) {
                     <label class="flex items-center gap-2 px-4 py-3 rounded-lg border border-gray-200 cursor-pointer hover:border-gold-300 transition-colors text-sm">
-                      <input type="radio" name="time" [value]="time" class="accent-gold-500">
+                      <input type="radio" [(ngModel)]="formData.time" name="time" [value]="time" class="accent-gold-500">
                       {{ time }}
                     </label>
                   }
