@@ -17,10 +17,12 @@
   padding-top: 0.5rem;                    /* py-2 = 8px */
   padding-bottom: 0.5rem;
   border-radius: 9999px;                  /* rounded-full = pill shape */
-  background-color: rgba(245, 158, 11, 0.1); /* bg-gold-500/10 (#f59e0b at 10% opacity) */
-  border: 1px solid rgba(250, 204, 21, 0.2); /* border-gold-400/20 (#facc15 at 20% opacity) */
+  background-color: rgba(255, 215, 0, 0.1); /* bg-gold-500/10 (#f59e0b at 10% opacity) */
+  border: 1px solid rgba(255, 255, 77, 0.2); /* border-gold-400/20 (#facc15 at 20% opacity) */
   margin-bottom: 2rem;                    /* mb-8 = 32px */
 }
+
+
 .my-heading {
   font-family: serif;       /* font-serif */
   font-size: 1.875rem;      /* text-3xl = 30px */
@@ -57,15 +59,6 @@
   .my-paragraph {
     font-size: 1.25rem;          /* text-xl = 20px */
   }
-}
-
-.my-container {
-  display: flex;                 /* flex */
-  flex-direction: column;        /* flex-col */
-  align-items: center;           /* items-center */
-  justify-content: center;       /* justify-center */
-  gap: 1rem;                     /* gap-4 = 16px */
-  margin-bottom: 3rem;           /* mb-12 = 48px */
 }
 
 /* Responsive adjustment */

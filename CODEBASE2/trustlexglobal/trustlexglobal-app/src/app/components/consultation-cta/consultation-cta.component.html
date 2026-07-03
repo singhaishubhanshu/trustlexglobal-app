@@ -1,15 +1,15 @@
-<section class="section-padding bg-gradient-hero" style="position: relative; overflow: hidden;" appScrollAnimation #ctaAnim="scrollAnim">
+<section class="section-padding bg-gradient-hero relative overflow-hidden" appScrollAnimation #ctaAnim="scrollAnim">
   
   <div style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;position: absolute;top: 0; right: 0; bottom: 0; left: 0; opacity: 0.03;"></div>
   <div style="position: absolute; top: 0; right: 0; width: 500px; height: 500px; border-radius: 50%; background-color: rgba(234, 179, 8, 0.05);filter: blur(120px);  pointer-events: none;"></div>
 
   <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.2); pointer-events: none;">
     
-    <div class="cta" [ngClass]="ctaAnim.isVisible ? 'visible' : ''">
+    <div class="cta relative max-w-4xl mx-auto text-center" [ngClass]="ctaAnim.isVisible ? 'visible' : ''">
       
       <div class="my-pill">
-        <span style="width: 1rem;height: 1rem;color: #fbbf24;display: flex;align-items: center;justify-content: center;">📅</span>
-        <span style="font-size: 0.75rem;color: #fbbf24;letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;">Complimentary Session</span>
+        <span claass="w-4 h-4 text-gold-400">📅</span>
+        <span class="text-gold-400 text-xs tracking-wide uppercase font-medium">Complimentary Session</span>
       </div>
 
       <h2 class="my-heading">
@@ -19,10 +19,10 @@
         Book a free strategy consultation. No obligations, no pressure — just expert guidance on the best path forward for your business.
       </p>
 
-      <div class="my-container">
-        <a routerLink="/contact" class="btn-gold" style="font-size: 1rem;display: inline-flex;align-items: center;gap: 0.5rem;  ">
+      <div class="my-container flex flex-col items-center justify-center gap-4 mb-12">
+        <a routerLink="/contact" class="btn-gold text-base gap-2">
           Book Your Free Consultation
-          <span style="margin-left: 0.5rem;">→</span>
+          <span class="w-4 h-4">→</span>
         </a>
       </div>
 

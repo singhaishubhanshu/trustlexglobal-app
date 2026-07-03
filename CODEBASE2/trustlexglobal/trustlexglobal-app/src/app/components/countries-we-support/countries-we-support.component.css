@@ -43,29 +43,45 @@
 }
 
 @media (min-width: 768px) { /* md breakpoint */
-  .text-3xl {
-    font-size: 1.875rem; /* 30px */
-    line-height: 2.25rem; /* 36px */
+  .md\:text-4xl {
+    font-size: 2.25rem;   /* 36px */
+    line-height: 2.5rem;  /* 40px */
   }
 }
 
+@media (min-width: 1024px) { /* lg breakpoint */
+  .lg\:text-5xl {
+    font-size: 3rem;   /* 48px */
+    line-height: 1;    /* Tight line height */
+  }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .md\:text-xl {
+    font-size: 12.5rem;   /* 20px */
+    line-height: 1.75rem; /* 28px */
+  }
+}
+
+
 @media (min-width: 640px) { /* lg breakpoint */
-  .sm:grid-cols-2 {
+  .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)); /* Tailwind lg:grid-cols-3 */
   }
 }
 
 @media (min-width: 1024px) { /* lg breakpoint */
-  .lg:grid-cols-3 {
+  .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* Tailwind lg:grid-cols-3 */
   }
 }
 
 @media (min-width: 1280px) { /* lg breakpoint */
-  .xl:grid-cols-4 {
+  .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr)); /* Tailwind lg:grid-cols-4 */
   }
 }
+
 
 .font-semibold {
   font-weight: 600;
@@ -243,12 +259,6 @@
   line-height: 2.25rem;  /* 36px */
 }
 
-@media (min-width: 768px) { /* md breakpoint */
-  .text-4xl {
-    font-size: 2.25rem;   /* 36px */
-    line-height: 2.5rem;  /* 40px */
-  }
-}
 
 .text-white {
   color: #ffffff;

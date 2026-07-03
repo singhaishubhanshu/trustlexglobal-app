@@ -1,0 +1,13 @@
+@media (min-width: 768px){
+  .md\:text-5xl{
+    font-size: 3rem;     /* 48px */
+    line-height: 1;      /* 48px line height */
+  }
+}
+
+@media(min-width: 1024px){
+  .lg\:text-6xl{
+    font-size:3.75rem;
+    line-height: 1;
+  }
+}

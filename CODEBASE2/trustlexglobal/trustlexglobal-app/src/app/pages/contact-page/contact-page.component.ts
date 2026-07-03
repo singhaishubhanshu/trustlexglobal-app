@@ -8,7 +8,7 @@ import { ScrollAnimationDirective } from '../../directives/scroll-animation.dire
   standalone: true,
   imports: [CommonModule, FormsModule,ScrollAnimationDirective],
   templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.css','../../../styles.css'],
+  styleUrls: ['../../../styles.css','./contact-page.component.css'],
 })
 export class ContactPageComponent {
   // Replaces useState(false)

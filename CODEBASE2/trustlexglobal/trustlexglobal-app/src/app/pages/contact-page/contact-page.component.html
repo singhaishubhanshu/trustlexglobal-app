@@ -4,7 +4,7 @@
     <div class="relative max-w-7xl mx-auto px-4 md:px-8">
       <div class="max-w-3xl">
         <div class="gold-line mb-6"></div>
-        <span class="text-gold-400 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+        <span class="text-gold-400 font-sans text-xs tracking-custom uppercase font-medium block mb-4">
           Book a Consultation
         </span>
         <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">
@@ -41,28 +41,28 @@
               <div class="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">First Name</label>
-                  <input type="text" required name="firstName" [(ngModel)]="formData.firstName" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your first name">
+                  <input type="text" required name="firstName" [(ngModel)]="formData.firstName" style="width: 95%;" class="px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your first name">
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">Last Name</label>
-                  <input type="text" required name="lastName" [(ngModel)]="formData.lastName" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your last name">
+                  <input type="text" required name="lastName" [(ngModel)]="formData.lastName" style="width: 95%;" class=" px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="Your last name">
                 </div>
               </div>
               
-              <div class="grid sm:grid-cols-2 gap-6">
+              <div class="grid sm:grid-cols-2 grid-cols-2 gap-6">
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">Email</label>
-                  <input type="email" required name="email" [(ngModel)]="formData.email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="you@company.com">
+                  <input type="email" required name="email" [(ngModel)]="formData.email" style="width: 95%;" class="px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="you@company.com">
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-navy-900 mb-2">Phone</label>
-                  <input type="tel" name="phone" [(ngModel)]="formData.phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="+1 (555) 000-0000">
+                  <input type="tel" name="phone" [(ngModel)]="formData.phone"  style="width: 95%;" class="px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none" placeholder="+1 (555) 000-0000">
                 </div>
               </div>
 
               <div>
                 <label class="block text-sm font-medium text-navy-900 mb-2">Which service interests you?</label>
-                <select name="service" [(ngModel)]="formData.service"  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none bg-white" required>
+                <select name="service" [(ngModel)]="formData.service" style="width: 100%;" class=" px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none bg-white" required>
                   <option value="">Select a service</option>
                   @for (service of services; track service) {
                     <option>{{ service }}</option>
@@ -103,7 +103,7 @@
               <h3 class="font-serif text-xl font-semibold text-navy-900 mb-4">What to Expect</h3>
               <ul class="space-y-3">
                 @for (item of expectations; track item) {
-                  <li class="flex gap-3">
+                  <li class="flex gap-3 items-center">
                     <span class="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5">✓</span>
                     <span class="text-sm text-charcoal-700">{{ item }}</span>
                   </li>
@@ -115,20 +115,20 @@
               <h3 class="font-serif text-xl font-semibold text-navy-900 mb-4">Contact Information</h3>
               <div class="space-y-3">
                 <a href="mailto:hello@trustlexglobal.com" class="flex items-center gap-3 text-sm text-charcoal-600 hover:text-navy-800 transition-colors">
-                  <span class="w-4 h-4 text-gold-500">✉</span> hello&#64;trustlexglobal.com
+                  <span class=" text-gold-500">✉ hello&#64;trustlexglobal.com </span>
                 </a>
-                <a href="tel:+18005551234" class="flex items-center gap-3 text-sm text-charcoal-600 hover:text-navy-800 transition-colors">
-                  <span class="w-4 h-4 text-gold-500">☏</span> +1 (800) 555-1234
+                <a href="tel:+919876543210" class="flex items-center gap-3 text-sm text-charcoal-600 hover:text-navy-800 transition-colors">
+                  <span class=" text-gold-500">☏ +91 9876543210</span>
                 </a>
                 <div class="flex items-center gap-3 text-sm text-charcoal-600">
-                  <span class="w-4 h-4 text-gold-500">📍</span> New York | Dubai | Singapore
+                  <span class="text-gold-500">📍 New York | Dubai | Singapore </span>
                 </div>
               </div>
             </div>
 
             <div class="border-t border-gray-200 pt-6">
               <div class="flex items-center gap-3 text-sm text-charcoal-600">
-                <span class="w-4 h-4 text-gold-500">⏱</span>
+                <span class="w-4 text-gold-500">⏱</span>
                 <div>
                   <p class="font-medium text-navy-800">Response Time</p>
                   <p class="text-xs text-charcoal-500">Within 24 hours, often same day</p>
