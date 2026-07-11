@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="max-w-3xl">
         <div class="gold-line mb-6"></div>
-        <span class="text-gold-400 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+        <span class="text-gold-400 font-sans text-xs tracking-custom uppercase font-medium block mb-4">
           Our Services
         </span>
         <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">
@@ -27,9 +27,9 @@
              [ngClass]="servicesAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
              [style.transition-delay]="i * 80 + 'ms'">
              
-            <div class="flex flex-col lg:flex-row items-stretch">
+            <div class="flex lg:flex-row items-stretch">
               
-              <div class="w-full lg:w-24 flex-shrink-0 bg-navy-800 rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none flex items-center justify-center p-6 group-hover:bg-gold-500 transition-colors duration-500">
+              <div class=" lg:w-24 flex-shrink-0 bg-navy-800 rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none flex items-center justify-center p-6 group-hover:bg-gold-500 transition-colors duration-500">
                 <span class="text-3xl text-gold-400 group-hover:text-navy-950 transition-colors duration-500">
                   {{ service.icon }}
                 </span>

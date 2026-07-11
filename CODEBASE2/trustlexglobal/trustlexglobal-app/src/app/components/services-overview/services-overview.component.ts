@@ -22,21 +22,21 @@ export class ServicesOverviewComponent {
   
   services: ServiceOverviewItem[] = [
     {
-      id: 'usa-formation',
+      id: 'usa-company-formation',
       title: 'USA LLC & Corporation',
       description: 'End-to-end formation across all 50 states, specializing in Delaware and Wyoming.',
       icon: '🏢',
       features: ['Registered Agent', 'EIN', 'BOI Compliance', 'Banking']
     },
     {
-      id: 'uae-formation',
+      id: 'uae-company-formation',
       title: 'UAE Company Formation',
       description: 'Strategic setup in UAE Free Zones and Mainland with visa support.',
       icon: '🌍',
       features: ['Free Zone', 'Mainland', 'Visas', 'Local Sponsor']
     },
     {
-      id: 'singapore-formation',
+      id: 'singapore-company-formation',
       title: 'Singapore Company',
       description: 'Pte Ltd registration, nominee director, and corporate banking.',
       icon: '🇸🇬',

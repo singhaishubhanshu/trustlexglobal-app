@@ -179,10 +179,6 @@
 .mb-4 {
   margin-bottom: 1rem;   /* 16px */
 }
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  margin-top: 0.75rem; /* Tailwind space-y-3 = 12px */
-}
-
 .w-4 {
   width: 1rem; /* 16px */
 }
@@ -286,14 +282,3 @@
   }
 }
 
-.text-white {
-  color: #ffffff;
-}
-
-.mb-8 {
-    margin-bottom: 2rem; /* 32px */
-}
-
-.text-charcoal-300 {
-  color: #d1d5db; /* Example charcoal tone, adjust to your palette */
-}

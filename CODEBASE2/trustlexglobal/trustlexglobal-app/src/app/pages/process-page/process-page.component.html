@@ -4,7 +4,7 @@
     <div class="relative max-w-7xl mx-auto px-4 md:px-8">
       <div class="max-w-3xl">
         <div class="gold-line mb-6"></div>
-        <span class="text-gold-400 font-sans text-xs tracking-[0.25em] uppercase font-medium block mb-4">
+        <span class="text-gold-400 font-sans text-xs tracking-custom uppercase font-medium block mb-4">
           Our Process
         </span>
         <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">
@@ -21,7 +21,7 @@
     <div class="max-w-5xl mx-auto space-y-12">
       
       @for (step of steps; track step.number; let i = $index) {
-        <div class="flex flex-col md:flex-row gap-8 transition-all duration-700"
+        <div class="flex md:flex-row gap-8 transition-all duration-700"
              [ngClass]="processAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
              [style.transition-delay]="i * 150 + 'ms'">
              

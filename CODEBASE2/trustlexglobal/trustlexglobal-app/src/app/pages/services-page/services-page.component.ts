@@ -22,14 +22,14 @@ export class ServicesPageComponent {
   // Assuming this is the data structure coming from your services file
   services: ServiceOverview[] = [
     {
-      id: 'usa-formation',
+      id: 'usa-company-formation',
       title: 'USA LLC & Corporation Formation',
       description: 'Comprehensive formation services across all 50 states, specializing in Delaware, Wyoming, and Nevada structures.',
       icon: '🏢', 
       features: ['Registered Agent', 'EIN Acquisition', 'BOI Compliance']
     },
     {
-      id: 'uae-formation',
+      id: 'uae-company-formation',
       title: 'UAE / Dubai Company Formation',
       description: 'Strategic setup in UAE Free Zones and Mainland, including visa processing and local compliance.',
       icon: '🌍',

@@ -32,9 +32,9 @@ export class NavbarComponent {
 
   // Mocked services list for the dropdown
   services = [
-    { id: 'usa-formation', shortTitle: 'USA Formation', icon: '🏢' },
-    { id: 'uae-formation', shortTitle: 'UAE / Dubai Formation', icon: '🌍' },
-    { id: 'singapore-formation', shortTitle: 'Singapore Formation', icon: '🇸🇬' },
+    { id: 'usa-company-formation', shortTitle: 'USA Formation', icon: '🏢' },
+    { id: 'uae-company-formation', shortTitle: 'UAE / Dubai Formation', icon: '🌍' },
+    { id: 'singapore-company-formation', shortTitle: 'Singapore Formation', icon: '🇸🇬' },
     { id: 'legal-drafting', shortTitle: 'Legal Drafting', icon: '⚖️' },
     { id: 'startup-advisory', shortTitle: 'Startup Advisory', icon: '💡' }
   ];

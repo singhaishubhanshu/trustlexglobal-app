@@ -62,7 +62,7 @@
 
               <div>
                 <label class="block text-sm font-medium text-navy-900 mb-2">Which service interests you?</label>
-                <select name="service" [(ngModel)]="formData.service" style="width: 100%;" class=" px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none bg-white" required>
+                <select name="service" [(ngModel)]="formData.service" style="width: 95%;" class=" px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none bg-white" required>
                   <option value="">Select a service</option>
                   @for (service of services; track service) {
                     <option>{{ service }}</option>
@@ -72,7 +72,7 @@
 
               <div>
                 <label class="block text-sm font-medium text-navy-900 mb-2">Tell us about your business goals</label>
-                <textarea rows="5" name="goals" [(ngModel)]="formData.goals" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none resize-none" placeholder="Describe your business, your goals, and what you're looking to achieve..."></textarea>
+                <textarea rows="5" name="goals" [(ngModel)]="formData.goals"  style="width: 95%;" class=" px-4 py-3 rounded-lg border border-gray-200 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors text-sm outline-none resize-none" placeholder="Describe your business, your goals, and what you're looking to achieve..."></textarea>
               </div>
 
               <div>
