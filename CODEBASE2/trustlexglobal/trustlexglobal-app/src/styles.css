@@ -1108,6 +1108,10 @@ padding-right: 1rem; /* 16px */
   background-color: rgba(255, 210, 0, 0.1);
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .justify-center {
   justify-content: center;
 }

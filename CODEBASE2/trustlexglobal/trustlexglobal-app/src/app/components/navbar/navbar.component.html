@@ -68,11 +68,11 @@
         </a>
       </div>
 
-      <button class="lg:hidden p-2 rounded-lg" (click)="isOpen = !isOpen">
+      <button class="lg:hidden p-2 rounded-lg " (click)="isOpen = !isOpen" style="background-color: transparent; border: none;">
         @if (isOpen) {
-          <span class="text-2xl" [ngClass]="scrolled ? 'text-navy-900' : 'text-white'">✕</span>
+          <i class="fa-solid fa-x text-2xl" [ngClass]="scrolled ? 'text-navy-900' : 'text-white'"></i>
         } @else {
-          <span class="text-2xl" [ngClass]="scrolled ? 'text-navy-900' : 'text-white'">☰</span>
+          <i class="fa-solid fa-bars text-2xl" [ngClass]="scrolled ? 'text-navy-900' : 'text-white'"></i>
         }
       </button>
     </div>
