@@ -1,13 +1,15 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideRouter, withInMemoryScrolling, withHashLocation } from '@angular/router';
+import { providePlatformBrowser } from '@angular/platform-browser';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    providePlatformBrowser(),
     provideRouter(
       routes,
-      // This single line replaces your entire custom ScrollToTop React component
-      withInMemoryScrolling({ scrollPositionRestoration: 'top' })
+      withInMemoryScrolling({ scrollPositionRestoration: 'top' }),
+      withHashLocation()  // ✅ Use hash-based routing for static hosts
     )
   ]
 };
