@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+huimport { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
@@ -36,7 +36,6 @@ export class AboutPageComponent {
   ];
 
   educations = [
-    'B.A. LL.B - Renaissance Law College, Indore',
     'Published Legal Author',
     'Fundamental & Technical Analysis Certification'
   ];
