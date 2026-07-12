@@ -25,6 +25,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "css",
+            "baseHref": "/trustlexglobal-app/",
             "assets": [
               {
                 "glob": "**/*",
