@@ -36,6 +36,7 @@ export class AboutPageComponent {
   ];
 
   educations = [
+    'Bachelor of Legislative Law',
     'Published Legal Author',
     'Fundamental & Technical Analysis Certification'
   ];
