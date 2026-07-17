@@ -9,7 +9,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(
       routes,
       withInMemoryScrolling({ scrollPositionRestoration: 'top' }),
-      withHashLocation()  // ✅ Use hash-based routing for static hosts
+     // withHashLocation()  // ✅ Use hash-based routing for static hosts
     )
   ]
 };
