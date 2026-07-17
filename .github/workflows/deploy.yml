@@ -26,7 +26,7 @@ jobs:
         working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
       
       - name: Deploy to gh-pages
-        run: npm run deploy
+        run: npx ng deploy
         working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
 
       - name: Debug workspace
