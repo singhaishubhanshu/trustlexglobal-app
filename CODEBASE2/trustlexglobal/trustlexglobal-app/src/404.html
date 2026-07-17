@@ -1,0 +1,29 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Loading…</title>
+  <meta name="robots" content="noindex">
+  <script>
+    (function () {
+      // If the path is the site root, just serve the root
+      if (location.pathname === '/' || location.pathname === '') {
+        location.replace('/');
+        return;
+      }
+      // Try to fetch the real index file and inject it so the SPA can route correctly.
+      fetch('/index.html').then(function (r) { return r.text(); }).then(function (html) {
+        document.open();
+        document.write(html);
+        document.close();
+        // Ensure the original path remains visible in the address bar (no hash).
+        history.replaceState({}, '', location.pathname + location.search + location.hash);
+      }).catch(function (err) {
+        // If anything goes wrong, fall back to the hash redirect to preserve functionality
+        console.error('Failed to fetch index.html:', err);
+        location.replace('/#' + location.pathname + location.search + location.hash);
+      });
+    })();
+  </script>
+</head>
+<body>Loading…</body>
+</html>
