@@ -49,10 +49,30 @@ export class ContactPageComponent {
 
   // Replaces the const handleSubmit = (e) => {...} arrow function
   async onSubmit(event: Event) {
+    // Prevent default browser submission behavior
     event.preventDefault();
+
+    // Prevent double submissions
+    if (this.isLoading) {
+      return;
+    }
+
+    // Reset previous error state
+    this.errorMessage = '';
+
+    // Basic client-side validation (without touching the HTML)
+    const firstName = (this.formData.firstName || '').toString().trim();
+    const lastName = (this.formData.lastName || '').toString().trim();
+    const email = (this.formData.email || '').toString().trim();
+
+    if (!firstName || !lastName || !this.isValidEmail(email)) {
+      this.errorMessage = 'Please provide your first name, last name and a valid email address.';
+      this.submitted = false; // ensure we don't show the success UI
+      return;
+    }
+
+    // All good, proceed with submission
     this.isLoading = true;
-    this.errorMessage='';
-    this.submitted = true;
 
     const backendURL = 'https://trustlexmailservice-305697903916.asia-south2.run.app'
     try {
@@ -74,5 +94,13 @@ export class ContactPageComponent {
     } finally {
       this.isLoading = false;
     }
+  }
+
+  // Simple email format check
+  private isValidEmail(email: string): boolean {
+    if (!email) return false;
+    // Basic RFC-5322-ish regex — sufficient for client-side checks
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
   }
 }
