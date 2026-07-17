@@ -65,10 +65,12 @@ export class ContactPageComponent {
         this.submitted = true;
       } else {
         this.errorMessage = 'Something went wrong. Please try again.';
+        this.submitted = false;
       }
     } catch (error) {
       console.error('Email sending failed:', error);
       this.errorMessage = 'Network error. Please check your connection.';
+      this.submitted = false;
     } finally {
       this.isLoading = false;
     }
