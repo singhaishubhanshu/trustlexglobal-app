@@ -20,7 +20,7 @@
       }).catch(function (err) {
         // If anything goes wrong, fall back to the hash redirect to preserve functionality
         console.error('Failed to fetch index.html:', err);
-        location.replace('/#' + location.pathname + location.search + location.hash);
+        location.replace('/' + location.pathname + location.search + location.hash);
       });
     })();
   </script>
