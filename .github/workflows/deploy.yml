@@ -23,6 +23,7 @@ jobs:
       
       - name: Build
         run: npm run build
+        working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
       
       - name: Deploy to gh-pages
         run: ng deploy
@@ -33,3 +34,4 @@ jobs:
           pwd
           ls -la
           find . -name "package.json" -type f
+        working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
