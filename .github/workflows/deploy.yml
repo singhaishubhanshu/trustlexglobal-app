@@ -19,13 +19,14 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-        working-directory: ./
+        working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
       
       - name: Build
         run: npm run build
       
       - name: Deploy to gh-pages
         run: ng deploy
+        working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
 
       - name: Debug workspace
         run: |
