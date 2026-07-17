@@ -19,9 +19,16 @@ jobs:
       
       - name: Install dependencies
         run: npm install
+        working-directory: ./
       
       - name: Build
         run: npm run build
       
       - name: Deploy to gh-pages
         run: ng deploy
+
+      - name: Debug workspace
+        run: |
+          pwd
+          ls -la
+          find . -name "package.json" -type f
