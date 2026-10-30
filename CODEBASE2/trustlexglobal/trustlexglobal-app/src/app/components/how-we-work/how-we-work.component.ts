@@ -33,7 +33,7 @@ export class HowWeWorkComponent {
       number: '02',
       title: 'Custom Strategy',
       description: 'We design a tailored plan covering entity structure, jurisdiction selection, compliance requirements, and a clear execution timeline.',
-      accent: 'from-navy-700 to-navy-500',
+      accent: 'from-gold-600 to-gold-400',
     },
     {
       icon: '🚀', // Rocket
