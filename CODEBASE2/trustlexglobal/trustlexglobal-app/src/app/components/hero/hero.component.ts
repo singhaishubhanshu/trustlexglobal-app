@@ -17,9 +17,8 @@ interface Stat {
 export class HeroComponent {
   
   stats: Stat[] = [
-    { icon: '🛡️', value: '2,400+', label: 'Companies Formed' },
-    { icon: '🌍', value: '40+', label: 'Countries Served' },
-    { icon: '👥', value: '98%', label: 'Client Satisfaction' },
+    { icon: '🌍', value: '20+', label: 'Countries Served' },
+    { icon: '👥', value: '100%', label: 'Client Satisfaction' },
   ];
   
 }

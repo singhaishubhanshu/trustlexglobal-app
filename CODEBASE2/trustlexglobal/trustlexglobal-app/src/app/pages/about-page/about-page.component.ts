@@ -16,9 +16,8 @@ import { ScrollAnimationDirective } from '../../directives/scroll-animation.dire
 export class AboutPageComponent {
   stats = [
     { icon: 'Globe', value: '3', label: 'Continents' },
-    { icon: 'Shield', value: '2,400+', label: 'Companies Formed' },
-    { icon: 'Users', value: '40+', label: 'Countries Served' },
-    { icon: 'Award', value: '98%', label: 'Client Satisfaction' },
+    { icon: 'Users', value: '20+', label: 'Countries Served' },
+    { icon: 'Award', value: '100%', label: 'Client Satisfaction' },
   ];
 
   specialties = [

@@ -19,9 +19,8 @@ export class TrustCredibilityComponent {
   badges: Badge[] = [
     { icon: '🛡️', label: 'Licensed & Registered' },
     { icon: '🏆', label: 'A+ Business Rating' },
-    { icon: '📖', label: '2,400+ Companies Formed' },
     { icon: '🏢', label: '50 US States Covered' },
-    { icon: '🌍', label: '40+ Countries Served' },
+    { icon: '🌍', label: '20+ Countries Served' },
     { icon: '⚖️', label: 'Multi-Jurisdiction Expertise' },
   ];
 
