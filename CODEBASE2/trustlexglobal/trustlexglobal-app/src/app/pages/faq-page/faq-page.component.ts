@@ -25,8 +25,9 @@ export class FAQPageComponent {
       category: 'General',
       items: [
         { q: "How is TRUSTLEX different from online formation services?", a: "Online formation services file paperwork and that's where their involvement ends. TRUSTLEX provides a dedicated advisor who understands your business goals, recommends the optimal structure and jurisdiction, handles every step with precision, and continues supporting you long after formation. We're a partner, not a filing service." },
-        { q: 'Do you work with international founders?', a: "Absolutely. Over 60% of our clients are international founders forming entities in jurisdictions where they don't reside. We specialize in remote-friendly formation processes, virtual registered agent services, and bank account introductions that work for non-residents." },
+        { q: 'Do you work with international founders?', a: "Absolutely. We work with international founders forming entities in jurisdictions where they don't reside. We specialize in remote-friendly formation processes, virtual registered agent services, and bank account introductions that work for non-residents." },
         { q: 'What does a consultation cost?', a: "Your first strategy consultation is completely complimentary. We believe in earning your trust before earning your business. During this session, we'll understand your goals and provide initial recommendations — no obligation, no pressure." },
+        { q: 'How are payments and government fees handled?', a: 'Our fees are agreed in writing before work begins. Unless stated otherwise, the fee is all-inclusive: it covers our service fee together with the government filing fees and registered agent charges for your formation, which we pay to the relevant authority or agent on your behalf. We do not hold client funds or move money for clients.' },
         { q: 'What industries do you serve?', a: 'We serve founders across technology, e-commerce, consulting, real estate, fintech, media, professional services, and more. Our value is jurisdiction and business-structure expertise, which applies across industries.' },
       ],
     },

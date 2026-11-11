@@ -30,7 +30,7 @@ export class FAQComponent {
     },
     {
       q: "Do you work with international founders who don't reside in the US, UAE, or Singapore?",
-      a: "Absolutely. Over 60% of our clients are international founders forming entities in jurisdictions where they don't reside. We specialize in remote-friendly formation processes, virtual registered agent services, and bank account introductions that work for non-residents.",
+      a: "Absolutely. We work with international founders forming entities in jurisdictions where they don't reside. We specialize in remote-friendly formation processes, virtual registered agent services, and bank account introductions that work for non-residents.",
     },
     {
       q: "How quickly can you form a company?",
@@ -39,6 +39,10 @@ export class FAQComponent {
     {
       q: "What does a consultation cost?",
       a: "Your first strategy consultation is complimentary. We believe in earning your trust before earning your business. During this session, we'll understand your goals and provide initial recommendations — no obligation, no pressure.",
+    },
+    {
+      q: "How are payments and government fees handled?",
+      a: "Our fees are agreed in writing before work begins. Unless stated otherwise, the fee is all-inclusive: it covers our service fee together with the government filing fees and registered agent charges for your formation, which we pay to the relevant authority or agent on your behalf. We do not hold client funds or move money for clients.",
     },
     {
       q: "Do you handle banking and financial setup?",

@@ -38,7 +38,7 @@ jobs:
         working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
       
       - name: Deploy to gh-pages
-        run: npx ng deploy
+        run: npx ng deploy --no-build
         working-directory: ./CODEBASE2/trustlexglobal/trustlexglobal-app/
 
       - name: Debug workspace

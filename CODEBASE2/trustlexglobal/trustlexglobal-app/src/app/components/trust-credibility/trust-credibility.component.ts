@@ -17,19 +17,11 @@ interface Badge {
 export class TrustCredibilityComponent {
   
   badges: Badge[] = [
-    { icon: '🛡️', label: 'Licensed & Registered' },
-    { icon: '🏆', label: 'A+ Business Rating' },
+    { icon: '🛡️', label: 'Registered New Mexico LLC' },
+    { icon: '👤', label: 'Dedicated Advisor' },
     { icon: '🏢', label: '50 US States Covered' },
-    { icon: '🌍', label: '20+ Countries Served' },
+    { icon: '💬', label: 'Transparent, Fixed Fees' },
     { icon: '⚖️', label: 'Multi-Jurisdiction Expertise' },
   ];
 
-  logos: string[] = [
-    'DMCC Free Zone',
-    'Delaware Division of Corporations',
-    'ACRA Singapore',
-    'Companies House UK',
-    'Innovation Hub Partner',
-    'Global Entrepreneur Network',
-  ];
 }

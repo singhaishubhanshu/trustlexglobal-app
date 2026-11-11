@@ -15,9 +15,9 @@ import { ScrollAnimationDirective } from '../../directives/scroll-animation.dire
 })
 export class AboutPageComponent {
   stats = [
-    { icon: 'Globe', value: '3', label: 'Continents' },
-    { icon: 'Users', value: '20+', label: 'Countries Served' },
-    { icon: 'Award', value: '100%', label: 'Client Satisfaction' },
+    { icon: '🏛️', value: '2026', label: 'Founded in New Mexico' },
+    { icon: '🤝', value: '110+', label: 'Businesses assisted by our founder before Trustlex' },
+    { icon: '👤', value: '1:1', label: 'Dedicated Advisor' },
   ];
 
   specialties = [

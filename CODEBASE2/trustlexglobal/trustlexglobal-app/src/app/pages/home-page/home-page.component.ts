@@ -7,7 +7,6 @@ import { ServicesOverviewComponent } from '../../components/services-overview/se
 import { HowWeWorkComponent } from '../../components/how-we-work/how-we-work.component';
 import { CountriesWeSupportComponent } from '../../components/countries-we-support/countries-we-support.component';
 import { AdvisoryProcessComponent } from '../../components/advisory-process/advisory-process.component';
-import { ClientSuccessComponent } from '../../components/client-success/client-success.component';
 import { FAQComponent } from '../../components/faq/faq.component';
 import { ConsultationCTAComponent } from '../../components/consultation-cta/consultation-cta.component';
 import { TrustCredibilityComponent } from '../../components/trust-credibility/trust-credibility.component';
@@ -24,7 +23,6 @@ import { TrustCredibilityComponent } from '../../components/trust-credibility/tr
     HowWeWorkComponent,
     CountriesWeSupportComponent,
     AdvisoryProcessComponent,
-    ClientSuccessComponent,
     FAQComponent,
     ConsultationCTAComponent
   ],

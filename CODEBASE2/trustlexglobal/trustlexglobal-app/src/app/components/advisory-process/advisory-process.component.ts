@@ -37,7 +37,7 @@ export class AdvisoryProcessComponent {
     {
       icon: '🤝', // HeartHandshake
       title: 'Long-Term Partnership',
-      description: 'We invest in relationships, not transactions. Many of our clients have been with us for 5+ years across multiple entities and jurisdictions.',
+      description: 'We invest in relationships, not transactions. We stay available after formation for the compliance and advisory questions that follow.',
     },
   ];
 }

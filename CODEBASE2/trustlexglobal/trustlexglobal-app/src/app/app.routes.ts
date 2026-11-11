@@ -8,6 +8,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ProcessPageComponent } from './pages/process-page/process-page.component';
 import { CountriesPageComponent } from './pages/countries-page/countries-page.component';
 import { FAQPageComponent } from './pages/faq-page/faq-page.component';
+import { TermsPageComponent } from './pages/terms-page/terms-page.component';
+import { PrivacyPageComponent } from './pages/privacy-page/privacy-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -18,5 +20,7 @@ export const routes: Routes = [
   { path: 'process', component: ProcessPageComponent },
   { path: 'countries', component: CountriesPageComponent },
   { path: 'faq', component: FAQPageComponent },
+  { path: 'terms', component: TermsPageComponent },
+  { path: 'privacy', component: PrivacyPageComponent },
   { path: '**', redirectTo: '' } // Optional: Catch-all route for 404s
 ];
